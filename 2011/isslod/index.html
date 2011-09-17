@@ -30,6 +30,16 @@
 
     <script src="../../modernizr.custom.js"></script>
     <script src="../../jquery.js"></script>
+
+    <!-- client syntax highlightning -->
+    <link   href="../../syntax/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    <script src="../../syntax/shCore.js" type="text/javascript"></script>
+    <script src="../../syntax/shAutoloader.js" type="text/javascript"></script>
+    <script src="../../syntax/shBrushTurtle.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        SyntaxHighlighter.defaults['toolbar'] = false;
+        SyntaxHighlighter.all();
+        </script>
 </head>
 
 <body class="deck-container">
@@ -234,7 +244,7 @@
 <div class="slide" id="foaf">
     <h2><img style="float:left; display:inline" src="images/foaf.gif" />&nbsp;Friend of a Friend (FOAF)</h2>
     <h3>&hellip; is widely accepted as a base for WebID descriptions.</h3>
-    <pre>
+    <pre class="brush: turtle">
 &lt;http://philipp.frischmuth24.de/id/me&gt; a foaf:Person;
   rdfs:comment "This is my public profile only, more information available with FOAF+SSL";
   rel:worksWith &lt;http://sebastian.tramp.name&gt;;
@@ -310,7 +320,7 @@
 <div class="slide" id="sioc3">
     <h2>SIOC: Example in Turtle</h2>
     <figure>
-    <pre>
+    <pre class="brush: turtle">
 &lt;http://blog.example.com/posts/1&gt; a sioc:Post;
   dc:title           "Hello World";
   dcterms:created    "2006-09-07T09:33:30Z";
@@ -374,7 +384,7 @@ GET /images/me.png HTTP/1.1
 Host: blog.example.com
 Accept: text/turtle
     </pre>
-    <pre>
+    <pre class="brush: turtle">
 &lt;http://blog.example.com/images/me.png&gt; a foaf:Image;
     cc:license      &lt;http://creativecommons.org/licenses/by/3.0/&gt;;
     dcterms:created "2006-09-07T09:33:30Z";
@@ -462,7 +472,7 @@ Accept: text/turtle
         <li>Connect an SSL client certificate with a WebID profile</li>
         <li>Allow the WebID owner to use her WebID / certificate instead of a username/password</li>
     </ul>
-    <pre>
+    <pre class="brush: turtle">
 [] a rsa:RSAPublicKey;
     cert:identity &lt;http://sebastian.tramp.name&gt;;
     rsa:modulus """C41199EE26C57F&hellip;27A8495F5A""";
