@@ -18,19 +18,28 @@ that use the API provided by core.
 (function($, deck, document, undefined) {
 	var slides, // Array of all the uh, slides...
 	current, // Array index of the current slide
+	$container, // Keeping this cached
 	
 	events = {
 		/*
 		This event fires whenever the current slide changes, whether by way of
 		next, prev, or go. The callback function is passed two parameters, from
 		and to, equal to the indices of the old slide and the new slide
-		respectively.
+		respectively. If preventDefault is called on the event within this handler
+		the slide change does not occur.
 		
 		$(document).bind('deck.change', function(event, from, to) {
 		   alert('Moving from slide ' + from + ' to ' + to);
 		});
 		*/
 		change: 'deck.change',
+		
+		/*
+		This event fires at the beginning of deck initialization, after the options
+		are set but before the slides array is created.  This event makes a good hook
+		for preprocessing extensions looking to modify the deck.
+		*/
+		beforeInitialize: 'deck.beforeInit',
 		
 		/*
 		This event fires at the end of deck initialization. Extensions should
@@ -62,7 +71,6 @@ that use the API provided by core.
 	updateStates = function() {
 		var oc = options.classes,
 		osc = options.selectors.container,
-		$container = $(osc),
 		old = $container.data('onSlide'),
 		$all = $();
 		
@@ -134,7 +142,6 @@ that use the API provided by core.
 		*/	
 		init: function(elements, opts) {
 			var startTouch,
-			$c,
 			tolerance,
 			esp = function(e) {
 				e.stopPropagation();
@@ -143,11 +150,14 @@ that use the API provided by core.
 			options = $.extend(true, {}, $[deck].defaults, opts);
 			slides = [];
 			current = 0;
-			$c = $[deck]('getContainer');
+			$container = $(options.selectors.container);
 			tolerance = options.touch.swipeTolerance;
 			
+			// Pre init event for preprocessing hooks
+			$d.trigger(events.beforeInitialize);
+			
 			// Hide the deck while states are being applied to kill transitions
-			$c.addClass(options.classes.loading);
+			$container.addClass(options.classes.loading);
 			
 			// Fill slides array depending on parameter type
 			if ($.isArray(elements)) {
@@ -174,7 +184,7 @@ that use the API provided by core.
 			});
 			
 			/* Bind touch events for swiping between slides on touch devices */
-			$c.unbind('touchstart.deck').bind('touchstart.deck', function(e) {
+			$container.unbind('touchstart.deck').bind('touchstart.deck', function(e) {
 				if (!startTouch) {
 					startTouch = $.extend({}, e.originalEvent.targetTouches[0]);
 				}
@@ -226,7 +236,7 @@ that use the API provided by core.
 			updateStates();
 			
 			// Show deck again now that slides are in place
-			$c.removeClass(options.classes.loading);
+			$container.removeClass(options.classes.loading);
 			$d.trigger(events.initialize);
 		},
 		
@@ -240,11 +250,15 @@ that use the API provided by core.
 		or not a number the call is ignored.
 		*/
 		go: function(index) {
+			var e = $.Event(events.change);
+			
 			if (typeof index != 'number' || index < 0 || index >= slides.length) return;
 			
-			$d.trigger(events.change, [current, index]);
-			current = index;
-			updateStates();
+			$d.trigger(e, [current, index]);
+			if (!e.isDefaultPrevented()) {
+				current = index;
+				updateStates();
+			}
 		},
 		
 		/*
@@ -297,7 +311,7 @@ that use the API provided by core.
 		container option.
 		*/
 		getContainer: function() {
-			return $(options.selectors.container);
+			return $container;
 		},
 		
 		/*
