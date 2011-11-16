@@ -14,14 +14,14 @@ h1 > span.subtitle {
 
 .deck-container.on-slide-0 #lsom-logo > a,
 .subtitle > a,
-#lsom-logo > a,
+h1 > a,
 .deck-container.on-slide-0 .deck-meta-author > a {
     color: white !important;
     text-decoration: none !important;
 }
 .deck-container.on-slide-0 #lsom-logo > a:hover,
 .subtitle > a:hover,
-#lsom-logo > a:hover,
+h1 > a:hover,
 .deck-container.on-slide-0 .deck-meta-author > a:hover {
     color: white !important;
     text-decoration: underline !important;
