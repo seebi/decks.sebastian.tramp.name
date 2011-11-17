@@ -1,0 +1,3 @@
+[submodule "userthemes/lsom"]
+	path = userthemes/lsom
+	url = git@github.com:AKSW/lsom.theme.deck.js.git
