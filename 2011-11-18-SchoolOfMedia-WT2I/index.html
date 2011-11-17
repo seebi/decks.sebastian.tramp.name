@@ -35,62 +35,223 @@
     <figcaption class="hideme">Header graphic, containing LSoM logo and title of the currently show slide</figcaption>
 </figure>
 
-<div class="slide" id="title">
+<div class="slide" id="title" xml:lang="de">
     <h1><a href="http://seebi.github.com/deck.js/2011-11-18-SchoolOfMedia-WT2I/">Web-Engineering und Web-Anwendungssysteme</a>
         <span class="subtitle">
-            Eine Vorlesung mit integrierter Übung im Modul<br />
-            <a href="http://www.leipzigschoolofmedia.de/master-content-and-media-engineering/module/modul-3-cme/">„Einführung in Aufbau und Nutzung von Web-Technologien“</a><br />
+            Eine Vorlesung mit integrierter Übung im Modul 3<br />
+            „<a href="http://www.leipzigschoolofmedia.de/master-content-and-media-engineering/module/modul-3-cme/">Einführung in Aufbau und Nutzung von Web-Technologien (WT)</a>“<br />
             des Studienganges<br />
-            <a href="http://www.leipzigschoolofmedia.de/master-content-and-media-engineering/">„Content & Media Engineering“</a>
+            „<a href="http://www.leipzigschoolofmedia.de/master-content-and-media-engineering/">Content & Media Engineering</a>“
         </span>
     </h1>
 </div>
 
-<div class="slide" id="http">
-    <h2>Hypertext Transfer Protocol (HTTP)</h2>
-    <p>... the base of all communiction on the Web</p>
+<div class="slide" id="zusammenfassung" xml:lang="de">
+    <h2>Zusammenfassung (offiziell)</h2>
+    <blockquote>
+        <p>Der Baustein WT 2 vermittelt die Softwaretechnik für die Entwicklung von Web-Applikationen. Im Rahmen des „Web-Engineering“ werden relevante Standards (insbesondere HTML, CSS und Javascript) und Technologien (insbesondere Datenbanken, AJAX, Web-Services) vorgestellt. Darüber hinaus werden wichtige Klassen von Web-Anwendungssystemen eingeführt. Dazu zählen insbesondere E-Commerce-Systeme, Virtuelle Welten, Lehr- und Lernsysteme sowie diverse Online-Services.</p>
+        <p><cite><a href="http://www.leipzigschoolofmedia.de/master-content-and-media-engineering/module/modul-3-cme/">http://www.leipzigschoolofmedia.de/master-content-and-media-engineering/module/modul-3-cme/</a></cite></p>
+    </blockquote>
+</div>
+
+<div class="slide" id="themen1">
+    <h2>Themen dieses Bausteins (WT2)</h2>
+    <h3>Web-Engineering</h3>
     <ul>
-        <li>HTTP is a request - response protocol</li>
-        <li>HTTP is an application layer protocol</li>
+        <li><strong>HTTP / Big Picture (oder: Wie das Web funktioniert)</strong></li>
+        <li>HTML5 / CSS (oder: Wie man Webseiten baut)</li>
+        <li>JavaScript (oder: Wie man spannende Webseiten baut)</li>
+        <li>PHP / Datenbanken (oder: Wie man Webseiten generiert)</li>
+        <li>Cloud / WebServices / ... </li>
     </ul>
+    <h3>Web-Anwendungssysteme</h3>
     <ul>
-        <li>The Client sends a request message</li>
-        <li>The Server answers with a response message</li>
+        <li><strong>WordPress</strong></li>
+        <li>Magento</li>
     </ul>
+    <h3>Web-Server</h3>
     <ul>
-        <li>Typical Clients: Browser or applications on your desktop computer or mobile device</li>
-        <li>Typical Server: A web server application on a host in a data center</li>
+        <li><strong>Apache / PHP</strong></li>
+    </ul>
+
+</div>
+
+<div class="slide" id="http-title">
+    <h1>Hypertext Transfer Protocol (HTTP)
+        <span class="subtitle">
+            ... the mother of all communication on the World Wide Web 
+        </span>
+    </h1>
 </div>
 
 <div class="slide" id="osi-vs-tcp">
-    <h2>ISO/OSI vs. TCP/IP protocol stack</h2>
+    <h2>ISO/OSI vs. TCP/IP Protocol Stack</h2>
     <figure>
-        <img src="http://www.marco.panizza.name/dispenseTM/slides/layers/img/osi_vs_tcpip.png">
-        <figcaption>In: <a href="http://www.marco.panizza.name/">marco.panizza.name</a></figcaption>
+        <img src="images/osi_vs_tcpip.png">
+        <figcaption>Via: <a href="http://www.marco.panizza.name/">marco.panizza.name</a></figcaption>
     </figure>
 </div>
 
+<div class="slide" id="http">
+    <h2>Hypertext Transfer Protocol (HTTP)</h2>
+    <h3>Basic Attributes</h3>
+    <ul>
+        <li>HTTP is a request - response protocol</li>
+        <li>HTTP is stateless</li>
+        <li>HTTP is an application layer protocol</li>
+        <li>HTTP is a protocol to fetch and manipulate resources</li>
+    </ul>
 
-<div class="slide" id="http-request">
-    <h2>HTTP Request message</h2>
-    <p></p>
+    <h3>Basic Workflow</h3>
+    <ul>
+        <li>The client sends a request message</li>
+        <li>The server answers with a response message</li>
+        <li>since HTTP 1.1: <a href="http://dret.net/lectures/web-spring11/uri-http#(22)">persistent connections and pipelining</a>
+    </ul>
+
+    <h3>Typical Stakeholder</h3>
+    <ul>
+        <li>Typical clients: browser or applications on your desktop computer or mobile device</li>
+        <li>Typical server: web server application on a host in a data center</li>
+</div>
+
+<div class="slide" id="http-request-overview">
+    <h2>HTTP Request Message: Overview</h2>
     <ul>
         <li>Request line
             <pre>GET /index.html HTTP/1.1</pre>
         </li>
-        <li>Headers
+        <li>Header
             <pre>Accept-Language: en</pre>
         </li>
         <li>Message body (optional)
     </ul>
 </div>
 
+<div class="slide" id="http-request-line">
+    <h2>HTTP Request Line</h2>
+    <pre>GET /index.html HTTP/1.1</pre>
+    <h3>Verbs</h3>
+    <ul>
+        <li>GET, HEAD, POST, OPTIONS (the most important ones)</li>
+        <li>PUT, DELETE, TRACE, CONNECT, PATCH</li>
+    </ul>
+    <h3>Requested Resource</h3>
+    <p>The local part of an URL (without fragment identifier)</p>
+    <ul>
+        <li>URL: Uniform Resource Locator
+            <pre>scheme://domain:port/path?query_string#fragment_id</pre>
+            <pre>http://seebi.github.com/deck.js/2011-11-18-SchoolOfMedia-WT2I/#http-request-line</pre>
+        </li>
+    </ul>
+</div>
+
+<div class="slide" id="http-request-header">
+    <h2>HTTP Request Header</h2>
+    <ul>
+        <li>name-value pairs</li>
+        <li>colon separated</li>
+        <li>clear text</li>
+        <li>used for content negotiation (see: <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.9">quality values</a>)</li>
+        <li><a href="http://en.wikipedia.org/wiki/List_of_HTTP_header_fields">List of HTTP header fields</a></li>
+    </ul>
+    <h3>Example Request</h3>
+    <pre>
+HEAD / HTTP/1.1
+User-Agent: curl/7.21.3 (i686-pc-linux-gnu)
+Host: google.de
+Accept: */*</pre>
+</div>
+
+<div class="slide" id="http-response-example">
+    <h2>HTTP Response Example</h2>
+    <h3>Tool: <a href="http://curl.haxx.se">cURL</a></h3>
+    <pre>curl(.exe) -X HEAD -v http://google.de</pre>
+    <h3>Output</h3>
+    <pre>
+HTTP/1.1 301 Moved Permanently
+Location: http://www.google.de/
+Content-Type: text/html; charset=UTF-8
+Date: Thu, 17 Nov 2011 00:21:37 GMT
+Expires: Sat, 17 Dec 2011 00:21:37 GMT
+Cache-Control: public, max-age=2592000
+Server: gws
+Content-Length: 218
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN</pre>
+</div>
+
+<div class="slide" id="http-response-codes">
+    <h2>HTTP Response Codes</h2>
+    <h3>Important Status Codes</h3>
+    <ul>
+        <li>200 OK &hellip; everything is fine</li>
+        <li>301 Moved Permanently &hellip; change your bookmark</li>
+        <li>303 See Other &hellip; follow the light</li>
+        <li>401 Unauthorized &hellip; please send credentials</li>
+        <li>403 Forbidden &hellip; not for you</li>
+        <li>404 Not Found &hellip; broken link</li>
+        <li>500 Internal Server Error &hellip; something is wrong</li>
+    </ul>
+    <p>see also: <a href="http://en.wikipedia.org/wiki/List_of_HTTP_status_codes">List of HTTP Status Codes</a></p>
+</div>
+
+
+
 <div class="slide" id="wireshark-demo">
-    <h2>Wireshark - a free and open-source packet analyzer</h2>
+    <h2>Practice: Deep-Inspection of your Browser Communication</h2>
     <figure>
         <img src="images/wireshark.png">
-        <figcaption>Practise: Use <a href="http://www.wireshark.org/">wireshark</a> to analyze what your browser sends and receives</figcaption>
+        <figcaption>
+            Challenge: Use <a href="http://www.wireshark.org/">wireshark</a> to analyze what your browser sends and receives.<br/>
+            Limit the network traffic capturing to HTTP communication with the LSoM server.<br/>
+            Review the sent and received HTTP packets and notice, which HTTP header fields your browser creates.
+        </figcaption>
     </figure>
+</div>
+
+<div class="slide" id="webarch-reading">
+    <h2>Further Reading Links: Web Architecture</h2>
+    <ul>
+        <li><a href="http://www.w3.org/TR/webarch/">Architecture of the World Wide Web, Volume One</a>; W3C Recommendation 15 December 2004 <q>&hellip; this architecture document discusses the core design.</q></li>
+        <li><a href="http://dret.net/lectures/web-spring11/">Web Architecture and Information Management</a>; Course from the School of Information, UC Berkeley</li>
+        <li>Wikipedia pages about:
+            <ul>
+                <li><a href="http://en.wikipedia.org/wiki/URL">Uniform Resource Locator</a></li>
+                <li><a href="http://en.wikipedia.org/wiki/HTTP">Hypertext Transfer Protocol</a></li>
+                <li><a href="http://en.wikipedia.org/wiki/WebDAV">WebDAV</a> (to look beyond basic HTTP)</li>
+            </li>
+    </ul>
+</div>
+
+<div class="slide" id="wireshark-demo">
+    <h2>Practice: WordPress Installation on your Desktop</h2>
+    <figure>
+        <img src="images/wordpress.png">
+        <figcaption>
+            Challenge: Install the popular blogging system <a href="http://www.wordpress.org/">WordPress</a> on your system.<br/>
+            This includes the installation of an apache webserver with PHP module as well as a MySQL database (e.g. the <a href="http://www.apachefriends.org/en/xampp.html">XAMPP distribution</a>)<br />
+        </figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="htmlcss-title">
+    <h1>HyperText Markup Language and Cascading Stylesheets
+        <span class="subtitle">
+            Wakeup please! :-)
+        </span>
+    </h1>
+</div>
+
+<div class="slide" id="htmlcss-resources">
+    <h2>HTML Resources</h2>
+    <p></p>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en/HTML/Element">Detailed list of HTML elements</a> (Reference)</li>
+        <li><a href="http://de.selfhtml.org/">SelfHTML</a> (Tutorial / Reference)</li>
+        <li><a href="http://validator.w3.org/">Markup validation service @ W3C</a> (online service / tool)</li>
+        <li><a href="http://www.w3schools.com/html/">HTML @ w3schools.com</a> (Tutorial)</li>
+    </ul>
 </div>
 
 
@@ -104,8 +265,8 @@
 </div>
 
 <!-- DECKJS STUFF - NO SLIDES FROM HERE -->
-<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
-<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+<!--<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>-->
+<!--<a href="#" class="deck-next-link" title="Next">&#8594;</a>-->
 
 <figure class="deck-footer">
     <div class="deck-status">
