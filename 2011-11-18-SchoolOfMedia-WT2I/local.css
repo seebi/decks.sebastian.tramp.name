@@ -12,6 +12,31 @@ h1 > span.subtitle {
     display:block;
 }
 
+.deck-container.on-slide-0 #lsom-logo > a,
+.subtitle > a,
+h1 > a,
+#lsom-logo > a,
+.deck-container.on-slide-0 .deck-meta-author > a {
+    color: white !important;
+    text-decoration: none !important;
+}
+.deck-container.on-slide-0 #lsom-logo > a:hover,
+.subtitle > a:hover,
+h1 > a:hover,
+#lsom-logo > a:hover,
+.deck-container.on-slide-0 .deck-meta-author > a:hover {
+    color: white !important;
+    text-decoration: underline !important;
+}
+.deck-meta-author > a {
+    color: black;
+    text-decoration: none;
+}
+.deck-meta-author > a:hover {
+    color: black;
+    text-decoration: underline !important;
+}
+
 /* Bullets and Numbers */
 .bullets-none {
     list-style-type: none;
