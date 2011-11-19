@@ -59,20 +59,19 @@
     <h3>Web-Engineering</h3>
     <ul>
         <li>HTTP / Big Picture (oder: Wie das Web funktioniert)</li>
-        <li>HTML5 (oder: Wie man Webseiten baut)</li>
+        <li>HTML(5) (oder: Wie man Webseiten baut)</li>
         <li>CSS (oder: Wie man Webseiten styled)</li>
         <li>JavaScript (oder: Wie man spannende Webseiten baut)</li>
         <li>PHP / Datenbanken (oder: Wie man Webseiten generiert)</li>
-        <li>Cloud / WebServices / ... </li>
     </ul>
     <h3>Web-Anwendungssysteme</h3>
     <ul>
-        <li>WordPress</li>
-        <li>Magento</li>
+        <li>WordPress und Magento</li>
     </ul>
     <h3>Web-Server</h3>
     <ul>
         <li>Apache / PHP</li>
+        <li>Cloud / WebServices / ... </li>
     </ul>
 </div>
 
@@ -80,10 +79,9 @@
     <h2>Themen dieses Bausteins (WT2) - nach Tag</h2>
     <h3>18.11.2011</h3>
     <ul>
-        <li>HTTP / Big Picture (oder: Wie das Web funktioniert)</li>
-        <li>Apache / PHP</li>
-        <li>WordPress</li>
-        <li>HTML5 (oder: Wie man Webseiten baut)</li>
+        <li><a href="#http-title">HTTP / Big Picture (oder: Wie das Web funktioniert)</a></li>
+        <li><a href="#html-title">HTML(5) (oder: Wie man Webseiten baut)</a></li>
+        <li><a href="#wordpress-installation">Apache / PHP / WordPress Installation</a></li>
     </ul>
     <h3>13.01.2012</h3>
     <ul>
@@ -118,8 +116,7 @@
     <h2>Hypertext Transfer Protocol (HTTP)</h2>
     <h3>Basic Attributes</h3>
     <ul>
-        <li>HTTP is a request - response protocol</li>
-        <li>HTTP is stateless</li>
+        <li>HTTP is a stateless request - response protocol</li>
         <li>HTTP is an application layer protocol</li>
         <li>HTTP is a protocol to fetch and manipulate resources</li>
     </ul>
@@ -234,7 +231,7 @@ X-Frame-Options: SAMEORIGIN</pre>
 </div>
 
 <div class="slide" id="webarch-reading">
-    <h2>Further Reading Links: Web Architecture</h2>
+    <h2>Resources: Web Architecture / HTTP</h2>
     <ul>
         <li><a href="http://www.w3.org/TR/webarch/">Architecture of the World Wide Web, Volume One</a>; W3C Recommendation 15 December 2004 <q>&hellip; this architecture document discusses the core design.</q></li>
         <li><a href="http://dret.net/lectures/web-spring11/">Web Architecture and Information Management</a>; Course from the School of Information, UC Berkeley</li>
@@ -245,22 +242,15 @@ X-Frame-Options: SAMEORIGIN</pre>
                 <li><a href="http://en.wikipedia.org/wiki/WebDAV">WebDAV</a> (to look beyond basic HTTP)</li>
             </ul>
         </li>
+        <li><a href="http://wireshark.org">wireshark</a> - network protocol analyzer</li>
+        <li><a href="http://curl.haxx.se/">curl</a> - command line networking tool</li>
+        <li><a href="https://addons.mozilla.org/de/firefox/addon/live-http-headers/">Live HTTP headers</a> - Firefox plugin to watch HTTP headers</li>
     </ul>
 </div>
 
-<div class="slide" id="wordpress-installation">
-    <h2>Practice: WordPress Installation on your Desktop</h2>
-    <figure>
-        <img src="images/wordpress.png">
-        <figcaption>
-            Challenge: Install the popular blogging system <a href="http://www.wordpress.org/">WordPress</a> on your system.<br/>
-            This includes the installation of an apache webserver with PHP module as well as a MySQL database (e.g. the <a href="http://www.apachefriends.org/en/xampp.html">XAMPP distribution</a>)<br />
-        </figcaption>
-    </figure>
-</div>
 
-<div class="slide" id="htmlcss-title">
-    <h1>HTML &amp; CSS
+<div class="slide" id="html-title">
+    <h1>HTML
         <span class="subtitle">
             Wakeup please! :-)
         </span>
@@ -296,10 +286,10 @@ X-Frame-Options: SAMEORIGIN</pre>
     <p>Plain text is annotated with tag elements:</p>
     <pre class="escape">not annotated text <tagname>annotated text</tagname> not annotated text</pre>
     <p>Tag elements can be used nested:</p>
-    <pre class="escape"><ol>
-    <li>plain list item</li>
-    <li>list item <q>with <span>wrong</q></span> nesting</li>
-</ol></pre>
+    <pre>&lt;ol&gt;
+    &lt;li&gt;plain list item&lt;/li&gt;
+    &lt;li&gt;list item &lt;q&gt;with &lt;span&gt;wrong&lt;/q>&lt;/span&gt; nesting&lt;/li&gt;
+&lt;ol&gt;</pre>
 </div>
 
 <div class="slide" id="html-basics-attributes">
@@ -346,13 +336,11 @@ X-Frame-Options: SAMEORIGIN</pre>
     <h2>Physical vs. Logical Markup</h2>
     <h3>Physical Markup</h3>
     <ul>
-        <li>Tag elements which do strictly define the style</li>
-        <li>Example: <code>b</code> (bold), <code>big</code> (font bigger)</li>
+        <li>Tag elements which do strictly define the style: <code>b</code> (bold), <code>big</code> (font bigger)</li>
     </ul>
     <h3>Logical / Semantic Markup</h3>
     <ul>
-        <li>Tag elements which annotate the document a meaning</li>
-        <li>Foster separation between style and structure</li>
+        <li>Tag elements which annotate a meaning and foster separation between style and structure</li>
         <li>Example: <code>em</code> or <code>strong</code> instead of <code>b</code></li>
         <li>HTML5 introduces a lot new semantic tag elements:
             <code><a href="https://developer.mozilla.org/en/HTML/Element/article">article</a></code>,
@@ -435,7 +423,7 @@ X-Frame-Options: SAMEORIGIN</pre>
 </div>
 
 <div class="slide" id="html5-features">
-    <h2>HTML5 Features</h2>
+    <h2>New HTML5 Features</h2>
     <figure>
         <img src="http://upload.wikimedia.org/wikipedia/commons/6/6e/HTML5-logo.svg">
         <figcaption>
@@ -444,14 +432,8 @@ X-Frame-Options: SAMEORIGIN</pre>
     </figure>
 </div>
 
-<div class="slide" id="css-intro">
-    <h2>Cascading Style Sheets</h2>
-    <p>Sorry, only ODP slides at the moment :-(</p>
-</div>
-
-
 <div class="slide" id="htmlcss-resources">
-    <h2>HTML / CSS Resources</h2>
+    <h2>HTML Resources</h2>
     <ul>
         <li><a href="http://cssdesk.com/">CSSDesk</a> (Online HTML/CSS Sandbox)</li>
         <li><a href="https://developer.mozilla.org/en/HTML/Element">Detailed list of HTML elements</a> (Reference)</li>
@@ -463,6 +445,16 @@ X-Frame-Options: SAMEORIGIN</pre>
     </ul>
 </div>
 
+<div class="slide" id="wordpress-installation">
+    <h2>Practice: Apache / PHP / WordPress Installation on your Desktop</h2>
+    <figure>
+        <img src="images/wordpress.png">
+        <figcaption>
+            Challenge: Install the popular blogging system <a href="http://www.wordpress.org/">WordPress</a> on your system.<br/>
+            This includes the installation of an apache webserver with PHP module as well as a MySQL database (e.g. the <a href="http://www.apachefriends.org/en/xampp.html">XAMPP distribution</a>)<br />
+        </figcaption>
+    </figure>
+</div>
 
 <div class="slide" id="thanks">
     <h2>Thank you for your Attention!</h2>
