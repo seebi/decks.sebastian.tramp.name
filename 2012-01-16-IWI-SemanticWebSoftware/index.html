@@ -7,19 +7,31 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=1024, user-scalable=no">
-    <script data-main="../scripts/main" src="../scripts/require-jquery.js"></script>
+    <script
+        data-main="../userthemes/aksw/manual/config"
+        src="../userthemes/aksw/manual/require-jquery.js"></script>
 
-    <link rel="stylesheet" href="../scripts/deckjs.css">
-    <link rel="stylesheet" href="../deck.js/themes/style/web-2.0.css" id="style-theme-link">
-    <link rel="stylesheet" href="../deck.js/themes/transition/vertical-slide.css" id="transition-theme-link">
-    <link rel="stylesheet" href="local.css">
+    <link rel="stylesheet" href="../deck.js/core/deck.core.css">
+    <link rel="stylesheet" href="../userthemes/aksw/style.css"
+        id="style-theme-link" media="screen, projection">
+    <script src="../userthemes/aksw/script.js"></script>
 
+    <meta name="dcterms.creator" content="http://sebastian.tramp.name">
+    <meta name="dcterms.date" content="2012-01-13">
     <meta name="author" content="Sebastian Tramp">
     <title>Sebastian Tramp: Semantic Web Software</title>
+
 </head>
 
 <body class="deck-container">
 
+<figure class="deck-header">
+    <span id="aksw-logo" class="hideme">
+        Agile Knowledge &amp; Semantic Web Research Group
+    </span>
+    <span class="title-from-current-deck"></span>
+    <figcaption class="hideme">Header graphic, containing LSoM logo and title of the currently show slide</figcaption>
+</figure>
 
 <div class="slide" id="title">
     <h1>Semantic Web Software</h1>
@@ -38,14 +50,14 @@
     <h2>Working Definition</h2>
     <p>Semantic Web Software is Software which is used for ...</p>
     <ul>
-        <li>Storage, Querying and Deployment</li>
+        <li><a href="#Storage-intro">Storage</a> , <a href="#Querying-intro">Querying</a> and Deployment</li>
         <li>Creation, Editing and Collaboration</li>
         <li>Reasoning and Rule Execution</li>
     </ul>
     <p>of RDF knowledge bases.</p>
 </div>
 
-<div class="slide" id="Storage">
+<div class="slide" id="Storage-intro">
     <h2>Storage</h2>
     <blockquote cite="http://en.wikipedia.org/wiki/Triplestore">
         <p>A triplestore is a purpose-built database for the storage and retrieval of Resource Description Framework (RDF) metadata.</p>
@@ -53,15 +65,163 @@
     </blockquote>
 </div>
 
-<div class="slide" id="Querying">
+<div class="slide" id="Storage-parser">
+    <h2>RDF Import / Parser</h2>
+    <p>RDF can be serialized in different syntax:</p>
+    <ul>
+        <li>RDF/XML</li>
+        <li>Turtle / N3</li>
+        <li>NTriples</li>
+        <li>Trix</li>
+        <li>GRDDL</li>
+        <li>RDF/JSON</li>
+    </ul>
+</div>
+
+<div class="slide" id="RDF-formats">
+    <h2>RDF Serializations</h2>
+    <figure>
+        <a href="http://www.w3.org/DesignIssues/diagrams/n3/venn">
+            <img class="center" src="http://www.w3.org/DesignIssues/diagrams/n3/venn" />
+            <figcaption>http://www.w3.org/DesignIssues/diagrams/n3/venn</figcaption>
+        </a>
+    </figure>
+</div>
+
+<div class="slide" id="RDF-formats-turtle">
+    <h2>Syntax: Turtle / N3</h2>
+    <p>Three simple triples &hellip;</p>
+    <pre class="brush: turtle">
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+
+&lt;http://sebastian.tramp.name&gt; a foaf:Person;
+    foaf:workInfoHomepage &lt;http://aksw.org/SebastianTramp&gt;;
+    rdfs:label "Sebastian Tramp".
+    </pre>
+</div>
+
+<div class="slide" id="RDF-formats-xml">
+    <h2>Syntax: RDF / XML</h2>
+    <p>&hellip; can look &hellip;</p>
+    <pre class="brush: xml">
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;rdf:RDF
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"&gt;
+  &lt;foaf:Person rdf:about="http://sebastian.tramp.name"&gt;
+    &lt;rdfs:label&gt;Sebastian Tramp&lt;/rdfs:label&gt;
+    &lt;foaf:workInfoHomepage rdf:resource="http://aksw.org/SebastianTramp"/&gt;
+  &lt;/foaf:Person&gt;
+&lt;/rdf:RDF&gt;
+    </pre>
+</div>
+
+<div class="slide" id="RDF-formats-json">
+    <h2>Syntax: RDF / JSON</h2>
+    <p>&hellip; soooo different.</p>
+    <pre class="brush: json">
+{
+  "http://sebastian.tramp.name" : {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+        "value" : "http://xmlns.com/foaf/0.1/Person",
+        "type" : "uri"
+        }
+
+      ],
+    "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+        "value" : "Sebastian Tramp",
+        "type" : "literal"
+        }
+
+      ],
+    "http://xmlns.com/foaf/0.1/workInfoHomepage" : [ {
+        "value" : "http://aksw.org/SebastianTramp",
+        "type" : "uri"
+        }
+
+      ]
+    }
+  }
+    </pre>
+</div>
+
+<div class="slide" id="Storage-import">
+    <h2>RDF Import</h2>
+    <p>Speed of triple import is a significant factor.</p>
+    <blockquote>
+        <p>&hellip; the <a href="http://swat.cse.lehigh.edu/projects/lubm/">LUBM</a> 8000 load speed was 160,739 triples-per-second on a single machine with 2 x Xeon 5520 and 72G RAM.</p>
+        <p><cite><a href="http://www.w3.org/wiki/LargeTripleStores">http://www.w3.org/wiki/LargeTripleStores</a></cite></p>
+    </blockquote>
+    <p>Note: Fastest (and biggest) syntax is <a href="http://www.w3.org/2001/sw/RDFCore/ntriples/">N-Triples</a>.</p>
+    </div>
+
+<div class="slide" id="Querying-intro">
     <h2>Querying</h2>
+    <h3>SPARQL Protocol and RDF Query Language</h3>
+    <ul>
+        <li><a href="http://www.w3.org/TR/rdf-sparql-query/">SPARQL 1.0</a> from January 2008
+            <ul>
+                <li>allows for a query to consist of triple patterns, conjunctions, disjunctions, and optional patterns (+ filter).</li>
+            </ul>
+        </li>
+        <li><a href="http://www.w3.org/TR/sparql11-query/">SPARQL 1.1</a> still a working draft (January 2012)
+            <ul>
+                <li>consists of specs for updating, the protocol, adds different query features and entailment regimes (reasoning, e.g. for <a href="">RDF Schema</a>)</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="slide" id="SPARQL-example">
+    <h2>SPARQL Example</h2>
+    <p>Give me all object properties which are in use on any resource of type person:</p>
+    <pre>
+SELECT DISTINCT ?p ?label
+WHERE
+{
+    ?s a foaf:Person.
+    ?s ?p ?o.
+    ?p a owl:ObjectProperty.
+    OPTIONAL {
+        ?p rdfs:label ?label.
+    }
+}
+    </pre>
+</div>
+
+
+<div class="slide" id="Querying-benchmarks">
+    <h2>Querying</h2>
+    <p>Triple stores (still) by <strong>a factor 5-50 slower</strong> than relational data management (BSBM, DBpedia Benchmark) but performance increases steadily</p>
+    <h3>Benchmarks:</h3>
+    <ul>
+        <li><a href="http://swat.cse.lehigh.edu/projects/lubm/">Lehigh University Benchmark</a></li>
+        <li><a href="http://www4.wiwiss.fu-berlin.de/bizer/BerlinSPARQLBenchmark/spec/">Berlin SPARQL Benchmark</a></li>
+        <li><a href="http://aksw.org/Projects/DBPSB">DBpedia SPARQL Benchmark</a></li>
+    </ul>
+</div>
+
+<div class="slide" id="dbpedia-benchmark">
+    <h2>DBpedia SPARQL Benchmark</h2>
     <p></p>
     <ul>
         <li></li>
     </ul>
 </div>
 
-<div class="slide" id="Deployment">
+<div class="slide" id="TripleStores">
+    <h2>Triple Stores</h2>
+    <p></p>
+    <ul>
+        <li></li>
+    </ul>
+</div>
+
+
+
+<div class="slide" id="Deployment-intro">
     <h2>Deployment</h2>
     <p></p>
     <ul>
@@ -82,11 +242,21 @@
 <!-- DECKJS STUFF - NO SLIDES FROM HERE -->
 <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
 <a href="#" class="deck-next-link" title="Next">&#8594;</a>
-<p class="deck-status">
-    <span class="deck-status-current"></span>
-    /
-    <span class="deck-status-total"></span>
-</p>
+
+<figure class="deck-footer">
+    <div class="deck-status">
+        <span class="deck-status-current"></span>
+        <span>/</span>
+        <span class="deck-status-total"></span>
+    </div>
+    <div class="deck-meta">
+        <span class="deck-meta-title"></span>
+        <span class="deck-meta-date"></span>
+        <span>|</span>
+        <span class="deck-meta-author"></span>
+    </div>
+    <figcaption class="hideme">Footer graphic, containing site number, presentation title, author and date.</figcaption>
+</figure>
 
 </body>
 </html>
