@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <foaf:Person rdf:about="http://sebastian.tramp.name">
+    <rdfs:label>Sebastian Tramp</rdfs:label>
+    <foaf:workInfoHomepage rdf:resource="http://aksw.org/SebastianTramp"/>
+  </foaf:Person>
+</rdf:RDF>
