@@ -21,7 +21,7 @@
     <script src="../userthemes/aksw/script.js"></script>
 
     <meta name="dcterms.creator" content="http://sebastian.tramp.name">
-    <meta name="dcterms.date" content="2012-01-13">
+    <meta name="dcterms.date" content="2012-01-16">
     <meta name="author" content="Sebastian Tramp">
     <title>Sebastian Tramp: Semantic Web Software</title>
     <link rel="stylesheet" href="local.css" />
@@ -387,10 +387,9 @@ WHERE
     <h2>Enrichment</h2>
     <p>Improve the quality of a knowledge base by adding additional statements:</p>
     <h3>Link Generation</h3>
-    <p>Inter-linking knowledge bases by finding and deploying relevant links and defining link specifications.</p>
+    <p>Inter-linking knowledge bases by finding and deploying relevant links and defining link specifications (e.g. <a href="http://limes.aksw.org/">LIMES</a> and <a href="http://www4.wiwiss.fu-berlin.de/bizer/silk/">SILK</a>)</p>
     <h3>Supervised Machine Learning</h3>
-    <p>Derive axioms about a class by using its instances as positive examples.</p>
-
+    <p>Derive axioms about a class by using its instances as positive examples (e.g. <a href="http://dl-learner.org">DL-Learner</a>, <a href="http://aksw.org/ORE">ORE</a>, <a href="http://hanne.aksw.org/">HANNE</a>)</p>
 </div>
 
 
@@ -495,8 +494,8 @@ WHERE
 <div class="slide" id="virtuoso-conductor">
     <h2>Virtuoso Conductor</h2>
     <figure>
-        <img class="twothird center" src="images/virtuoso-conductor.png">
-        <figcaption>Virtuoso OpenSource 6.1.4: Conductor web interface
+        <a href="images/virtuoso-conductor.png"><img class="twothird center" src="images/virtuoso-conductor.png"></a>
+        <figcaption>Virtuoso OpenSource 6.1.3: Conductor web interface
         </figcaption>
     </figure>
 </div>
@@ -521,10 +520,163 @@ WHERE
 <div class="slide" id="dydra-queryshell">
     <h2>Dydra Query Shell</h2>
     <figure>
-        <img class="twothird center" src="images/dydra-query.png">
-        <figcaption>dydra.com: standard query shell
+        <a href="images/dydra-query.png"><img class="twothird center" src="images/dydra-query.png"></a>
+        <figcaption><a href="http://dydra.com">dydra.com</a>: standard query shell
         </figcaption>
     </figure>
+</div>
+
+<div class="slide" id="fox">
+    <h2>Extraction: FOX</h2>
+    <depiction class="ahalf right">
+        <img class="center" src="http://lh3.ggpht.com/-d79marTMEUo/TlzV1DPGXZI/AAAAAAAAApY/HOpg8PyJT0o/s800/fox.png">
+    </depiction>
+    <p>Federated Knowledge Extraction Framework</p>
+    <ul>
+        <li>Input in natural language text files</li>
+        <li>Extracts RDF triples</li>
+        <li>Integrates the Linked Data Cloud</li>
+        <li>Merges the result of Named Entity Recognition, Keyword Extraction and Relation Extraction tools</li>
+    </ul>
+</div>
+
+<div class="slide" id="fox-example-input">
+    <h2>FOX Example Input</h2>
+    <blockquote>The foundation of the University of Leipzig in 1409 initiated the city's development into a centre of German law and the publishing industry. The philosopher and mathematician Gottfried Leibniz was born in Leipzig in 1646, and attended the university from 1661–1666.
+    </blockquote>
+</div>
+
+<div class="slide" id="fox-example-output">
+    <h2>FOX Example Output</h2>
+    <pre>[] a ann:Annotation , scmsann:ORGANIZATION ;
+     scms:beginIndex "22"^^xsd:int ;
+     scms:endIndex "43"^^xsd:int ;
+     scms:means dbpedia:University_of_Leipzig ;
+     scms:source &lt;http://ns.aksw.org/scms/tools/FOX&gt; ;
+     ann:body "University of Leipzig"^^xsd:string .</pre>
+    This could be used to add
+    <pre>:mySource foaf:topic dbpedia:University_of_Leipzig</pre>
+    to the metadata of <code>:mySource</code>.
+</div>
+
+<div class="slide" id="limes">
+    <h2>Enrichment: LIMES</h2>
+    <depiction class="ahalf right">
+        <img class="center" src="http://lh4.ggpht.com/-u3xaJ9mAcfY/TlzV1f0OluI/AAAAAAAAApU/z0V6VURN_tI/s800/limes.png">
+    </depiction>
+    <p>LIMES is a link discovery framework for the Web of Data</p>
+    <ul>
+        <li>implements time-efficient approaches for large-scale link discovery</li>
+        <li>based on the characteristics of metric spaces</li>
+        <li>easily configurable via a web interface</li>
+    </ul>
+</div>
+
+<div class="slide" id="limes-interface">
+    <h2>LIMES Webinterface</h2>
+    <figure class="twothird center">
+    <a href="images/colanut.png">
+        <img class="center" src="images/colanut.png">
+        <figcaption>limes.aksw.org</figcaption>
+    </a>
+    </figure>
+</div>
+
+<div class="slide" id="protege">
+    <h2>Editing: Protégé</h2>
+    <blockquote>a free, open source ontology editor and knowledge-base framework.</blockquote>
+    <ul>
+        <li>Java Swing desktop application (Web-based Protégé as beta release)</li>
+        <li>Very long development history beyond the existence of RDF</li>
+        <li>Large plugin repository (backends, import / export, &hellip;)</li>
+        <li>Strong support for reasoning and ontology engineering</li>
+        <li>Strong support instance editing forms / knowledge acquisition</li>
+    </ul>
+</div>
+
+<div class="slide" id="topbraid-interface">
+    <h2>Protégé</h2>
+    <figure class="twothird center">
+    <a href="images/Protege.png">
+        <img class="center" src="images/Protege.png">
+        <figcaption>Protégé</figcaption>
+    </a>
+    </figure>
+</div>
+
+<div class="slide" id="topbraid">
+    <h2>Editing: TopBraid Composer</h2>
+    <blockquote>a modelling environment for developing Semantic Web ontologies and building semantic applications</blockquote>
+    <ul>
+        <li>Implemented as an Eclipse plug-in</li>
+        <li>Target user: Enterprise knowledge worker and developer</li>
+        <li>Strong support of SPARQL and SPARQL based rules (<a href="http://www.w3.org/Submission/2011/SUBM-spin-modeling-20110222/">SPARQL Inferencing Notation - SPIN</a>)</li>
+        <li>Integration with Sesame and other Triple Stores</li>
+        <li>Extensible via a published API</li>
+    </ul>
+</div>
+
+<div class="slide" id="topbraid-interface">
+    <h2>TopBraid Composer</h2>
+    <figure class="twothird center">
+    <a href="images/TopBraid.png">
+        <img class="center" src="images/TopBraid.png">
+        <figcaption>Topbraid Composer</figcaption>
+    </a>
+    </figure>
+</div>
+
+<div class="slide" id="smw">
+    <h2>Collaboration: Semantic Media Wiki</h2>
+    <ul>
+        <li>PHP Wiki engine based on the wikipedia wiki</li>
+        <li>Special syntax for typed links (object properties)</li>
+        <li>Automatically-generated lists</li>
+        <li>Semantic Templates for knowledge acquisition</li>
+        <li>Resources and wiki pages are the same (problematic)</li>
+        <li>Very active community which support multiple plugins</li>
+    </ul>
+    <pre>
+Sebastian [[knows::Tilo]] since two years.
+    </pre>
+</div>
+
+<div class="slide" id="ontowiki">
+    <h2>Collaboration: OntoWiki</h2>
+    <p></p>
+    <ul>
+        <li>Not a wiki with semantic extension but a wiki-like knowledge acquisition framework</li>
+        <li>Works directly on a triple/quad store (e.g. Virtuoso) via SPARQL/Update</li>
+        <li>Provides Linked Data Resource and a SPARQL Endpoint</li>
+        <li>Graph-based access control</li>
+        <li>Extensible Editing Widgets (e.g. for specific datatypes or properties)</li>
+        <li>Supports inter-resource communication with <a href="http://aksw.org/Projects/SemanticPingback">Semantic Pingback</a></li>
+    </ul>
+</div>
+
+
+<div class="slide" id="ontowiki-interface">
+    <h2>OntoWiki</h2>
+    <figure class="twothird center">
+    <a href="images/OntoWiki.png">
+        <img class="center" src="images/OntoWiki.png">
+        <figcaption>OntoWiki</figcaption>
+    </a>
+    </figure>
+</div>
+
+
+<div class="slide" id="more">
+    <h2>More Tools</h2>
+    <p>If we still have time &hellip;</p>
+    <ul>
+        <li><a href="http://hanne.aksw.org/">HANNE</a> - Holistic application for navigational knowledge engineering</li>
+        <li><a href="http://www.visualdataweb.org/relfinder.php">RelFinder</a> - Interactive Relationship Discovery in RDF Data</li>
+        <li><a href="http://www.visualdataweb.org/gfacet.php">gFacet</a> - Graph-based Faceted Exploration of RDF Data</li>
+        <li><a href="http://www.w3.org/2000/10/swap/doc/cwm.html">CWM</a> - general-purpose data processor for the semantic web</li>
+        <li><a href="http://prefix.cc/">prefix.cc</a> - namespace lookup for RDF developers</li>
+        <li><a href="http://www.w3.org/2005/ajar/tab">Tabulator</a> - a generic data browser and editor</li>
+    </ul>
 </div>
 
 
