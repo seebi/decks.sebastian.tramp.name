@@ -12,7 +12,9 @@ require([
         "https://raw.github.com/imakewebthings/deck.js/master/extensions/goto/deck.goto.js",
         "https://github.com/imakewebthings/deck.js/raw/master/extensions/status/deck.status.js",
         "https://github.com/imakewebthings/deck.js/raw/master/extensions/navigation/deck.navigation.js",
-        "https://github.com/imakewebthings/deck.js/raw/master/extensions/hash/deck.hash.js"
+        "https://github.com/imakewebthings/deck.js/raw/master/extensions/hash/deck.hash.js",
+        "http://morulia.de:4123/socket.io/socket.io.js",
+        "https://raw.github.com/AKSW/KeyNode.js/master/watcher/keynode.watch.js"
         ], function() {
             // Deck initialization-->
             $.deck('.slide');
