@@ -131,7 +131,11 @@
         <figcaption>
             <a href="http://en.rsf.org/">Reporters without Borders</a>
             maintain a <a href="http://en.rsf.org/IMG/pdf/Internet_enemies.pdf">"Enemies of the Internet"</a> list,
-            which currently (2011) consists of 10 countries with more than 450&nbsp;billion internet users.</figcaption>
+            which currently (2011) consists of 10 countries with more than 450&nbsp;billion internet users.
+            In 2009, China blocked Twitter, Facebook and other Social Web pages because of
+            <a href="http://www.usatoday.com/tech/news/2009-06-02-china-twitter-tiananmen-protests_N.htm">political commentary</a>
+            and <a href="http://news.smh.com.au/breaking-news-technology/internet-activists-discuss-online-democracy-20091122-isc9.html">self organization</a>.
+        </figcaption>
     </figure>
     <ul class="ahalf left">
         <li>Privacy</li>
@@ -208,7 +212,140 @@
     </figure>
 </div>
 
+<div class="slide" id="architecture-datalayer">
+    <h2>Architecture: Data Layer</h2>
+    <figure>
+        <a href="images/Architecture2.svg"><img class="center nearlyall" src="images/Architecture2.png"></a>
+        <figcaption><strong>Data Layer:</strong> Resources (WebIDs, Data / Media Artefacts) and Feeds (RDF enabled Activity Streams and History Feeds)</figcaption>
+    </figure>
+</div>
 
+<div class="slide" id="architecture-protocollayer">
+    <h2>Architecture: Protocol Layer</h2>
+    <figure>
+        <a href="images/Architecture2.svg"><img class="center nearlyall" src="images/Architecture2.png"></a>
+        <figcaption><strong>Protocol Layer:</strong> Linked Data, SPARQL query / update, Semantic Pingback, PubSubHubbub</figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="semanticpingback-0">
+    <h2>Semantic Pingback: Usage</h2>
+    <ul>
+        <li>Based on an extension of the well-known Pingback technology</li>
+        <!--<ul><li>which is one of the technological cornerstones of the overwhelming success of the blogosphere in the Social Web.</li></ul> -->
+        <li>Adds support for Linked Data resources including RDFa, and named links/relations.</li>
+        <li>Two-fold usage:
+            <ul>
+                <li>Facilitate the first contact between two
+                    WebIDs and establish a new connection (Friending)</li>
+                <li>Ping the owner of different social network artefacts while doing an activity with that artefact (tagging an image, sharing a website from the owner).</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="slide" id="semanticpingback-1">
+    <h2>Semantic Pingback: Architecture</h2>
+    <figure>
+        <a href="images/SemanticPingback.png"><img class="center nearlyall" src="images/SemanticPingback.png"></a>
+        <figcaption>Architecture of the Semantic Pingback approach</figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="architecture-servicelayer">
+    <h2>Architecture: Service Layer</h2>
+    <figure>
+        <a href="images/Architecture2.svg"><img class="center nearlyall" src="images/Architecture2.png"></a>
+        <figcaption><strong>Service Layer:</strong> ping, push, query, update, (get)</figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="architecture-applicationlayer">
+    <h2>Architecture: Application Layer</h2>
+    <figure>
+        <a href="images/Architecture2.svg"><img class="center nearlyall" src="images/Architecture2.png"></a>
+        <figcaption><strong>Application Layer:</strong> concrete social web applications (foto sharing, blog, profile manager, ...)</figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="xOperator">
+    <h2>xOperator</h2>
+    <figure>
+        <a href="images/xOperator-UsageScenarios.svg"><img class="center nearlyall" src="images/xOperator-UsageScenarios.png"></a>
+        <figcaption>Usage Scenarios: (A) personal agent, (B) group agent, (C) agent network</figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="xOperator">
+    <h2>xOperator</h2>
+    <figure>
+        <a href="images/xOperator-Screenshot.svg"><img class="center nearlyall" src="images/xOperator-Screenshot.png"></a>
+        <figcaption>Interconnecting the DSSN with Instant Messaging Networks</figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="MSSW-Screenshots">
+    <h2>Mobile Social Semantic Web</h2>
+    <figure>
+        <a href="images/MSSW-Screenshots.png"><img class="center nearlyall" src="images/MSSW-Screenshots.png"></a>
+        <figcaption>Weaving a Distributed, Semantic Social Network for Mobile Users</figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="OntoWiki">
+    <h2>OntoWiki</h2>
+    <ul>
+        <li>A general purpose Linked Data wiki</li>
+        <li>A testbed for around 30% of AKSW projects</li>
+        <li>Provides protocol support for Semantic Pingback, PubSubHubbub, Linked Data, ...</li>
+        <li>A full featured browser based <strong>DSSN client</strong> (via extensions)</li>
+    </ul>
+</div>
+
+
+<div class="slide" id="OntoWiki-Screenshot">
+    <h2>OntoWiki</h2>
+    <figure>
+        <a href="images/ActivityStream.png"><img class="center nearlyall" src="images/ActivityStream.png"></a>
+        <figcaption>The Activity Stream integrates the latest activities synced with PubSubHubbub from your Social Network</figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="contributions">
+    <h2>Contributions</h2>
+    <ul>
+        <li>Overall architecture</li>
+        <li>Data Layer: dssn schema, history feeds</li>
+        <li>Protocol Layer: Semantic Pingback, WebID deputy extension</li>
+        <li>Service Layer: ping service</li>
+        <li>Application Layer: xOperator, Mobile Social Semantic Web Client, OntoWiki</li>
+    </ul>
+</div>
+
+<div class="slide" id="publications">
+    <h2>Publications</h2>
+    <p>Directly related publications: 10 out of 30 (english, peer reviewed)</p>
+    <p>Related major research papers are:</p>
+    <ul>
+        <li>S.Tramp et.al.: <a href="http://svn.aksw.org/papers/2011/SWJ_DSSN/public.pdf">An Architecture of a Distributed Semantic Social Network</a>, Semantic Web Journal, 2012 (accepted pending minor revision)</li>
+        <li>S.Dietzold et.al: <a href="http://svn.aksw.org/papers/2010/EKAW_SemanticPingback/public.pdf">Weaving a Social Data Web with Semantic Pingback</a> In: Proceedings of the EKAW 2010 - Knowledge Engineering and Knowledge Management by the Masses, 2010</li>
+        <li>S.Dietzold et.al.: <a href="http://www.eswc2008.org/final-pdfs-for-web-site/aao-2.pdf">xOperator - Interconnecting the Semantic Web and Instant Messaging Networks</a> In: Proceedings of 5th European Semantic Web Conference 2008, 2008</li>
+        <li>S.Tramp et.al.: <a href="http://www.bibsonomy.org/bibtex/237daf6456c7455bf213449ad2fcfd915/aksw">Weaving a Distributed, Semantic Social Network for Mobile Users</a> In: Proceedings of the 9th Extended Semantic Web Conference 2011, 2011</li>
+    </ul>
+</div>
+
+<div class="slide" id="publications-other">
+    <h2>Publications</h2>
+    <p>Directly related publications: 10 out of 30 (english, peer reviewed)</p>
+    <p>Other related papers are (incl. co-author papers):</p>
+    <ul>
+        <li>H.Story et.al.: <a href="http://www.bibsonomy.org/bibtex/2445b82a81f10a62417821daa9b988048/aksw">Friending On The Social Web</a> In: Federated Social Web Europe 2011</li>
+        <li>S.Dietzold et.al.: <a href="http://www.bibsonomy.org/bibtex/2309657d02f047f95af55415fe0e0c706/aksw">RDFauthor - Employing RDFa for collaborative Knowledge Engineering</a> In: Proceedings of the EKAW 2010</li>
+        <li>T.Ermilov et.al: <a href="http://www.bibsonomy.org/bibtex/2ef3d1f56b1b9254376a0ba6ee216532e/aksw">OntoWiki Mobile - Knowledge Management in your Pocket</a> In: Proceedings of the ESWC 2011</li>
+        <li>N.Heino et.al.: <a href="http://www.bibsonomy.org/bibtex/2bb7746b8ddbae8740f509ca6cf3ee852/aksw">Developing Semantic Web Applications with the OntoWiki Framework</a> In: Networked Knowledge - Networked Media, 2009</li>
+        <li>S.Auer et.al: <a href="http://www.bibsonomy.org/bibtex/2adebb2cc068861ce489c3248f1a38a62/aksw">OntoWiki - A Tool for Social, Semantic Collaboration</a>. In: The Semantic Web - ISWC 2006</li>
+    </ul>
+</div>
 <div class="slide" id="thanks">
     <h2>Thank you for your Attention!</h2>
     <h3>My WebID:</h3>
