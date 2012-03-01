@@ -56,18 +56,157 @@
 </div>
 
 
-<div class="slide" id="">
+<div class="slide" id="outline">
     <h2>Outline</h2>
     <p></p>
     <ul>
-        <li>Problem / Motivation</li>
-        <li>Solution / Approach</li>
-        <li>State-of-the-Art / Related Approaches</li>
-        <li>Publications highlighting the quality (e.g. journal publications, highly ranked conferences)</li>
+        <li>Motivation</li>
+        <li>Approach</li>
+        <li>Related Work</li>
+        <li>Publications</li>
         <li>Next steps</li>
     </ul>
 </div>
 
+<div class="slide" id="xkcd">
+    <h2>Current State of the Social Web</h2>
+    <figure>
+        <a href="images/xkcd.jpg"><img class="aquarterto center" src="images/xkcd.jpg" /></a>
+        <figcaption>Illustration by <a href="http://xkcd.com/802/">Randall Munroe</a> (Oktober 2009)</figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="webisshrinking">
+    <h2>Current State of the Social Web</h2>
+    <figure>
+         <a href="images/TheWebIsShrinking.png"><img class="twothird center" src="images/TheWebIsShrinking.png"></a>
+         <figcaption>In:
+            <a href="http://allthingsd.com/20110623/the-web-is-shrinking-now-what/">The Web Is Shrinking. Now What?</a>
+            /
+            <a href="http://comscore.com">comScore study</a>
+        </figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="walled-gardens">
+    <h2>Current State of the Social Web</h2>
+    <figure>
+        <img class="twothird center" src="images/walled-gardens.jpg">
+        <figcaption>Illustration by David Simonds, via <a href="http://www.w3.org/DesignIssues/CloudStorage.html">Design Issues: Socially Aware Cloud Storage</a> (by Tim Berners-Lee - August 2009)</figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="motivation">
+    <h2>Motivation</h2>
+    <ul>
+        <li>Privacy</li>
+        <li>Data Security</li>
+        <li>Data Ownership</li>
+        <li>Extensibility</li>
+        <li>Reliability</li>
+        <li>Freedom of Communication</li>
+    </ul>
+</div>
+
+<div class="slide" id="motivation-psn">
+    <h2>Motivation</h2>
+    <figure class="ahalf right">
+        <a href="images/psn.png"><img class="ahalf center" src="images/psn.png"></a>
+        <figcaption>In 04/2011, the <a href="http://eu.playstation.com/psn/">PlayStation Network</a> had a security breach: user profiles were stolen and the network had a long downtime.</figcaption>
+    </figure>
+    <ul class="ahalf left">
+        <li>Privacy</li>
+        <li><strong>Data Security</strong></li>
+        <li>Data Ownership</li>
+        <li>Extensibility</li>
+        <li><strong>Reliability</strong></li>
+        <li>Freedom of Communication</li>
+    </ul>
+</div>
+
+<div class="slide" id="motivation-freedom">
+    <h2>Motivation</h2>
+    <figure class="ahalf right">
+        <a href="images/Internet_blackholes.svg"><img class="center" src="images/Internet_blackholes.svg"></a>
+        <figcaption>
+            <a href="http://en.rsf.org/">Reporters without Borders</a>
+            maintain a <a href="http://en.rsf.org/IMG/pdf/Internet_enemies.pdf">"Enemies of the Internet"</a> list,
+            which currently (2011) consists of 10 countries with more than 450&nbsp;billion internet users.</figcaption>
+    </figure>
+    <ul class="ahalf left">
+        <li>Privacy</li>
+        <li>Data Security</li>
+        <li>Data Ownership</li>
+        <li>Extensibility</li>
+        <li>Reliability</li>
+        <li><strong>Freedom of Communication</strong></li>
+    </ul>
+</div>
+
+<div class="slide" id="approach">
+    <h2>Approach</h2>
+    <p>Based on the given motivational points, the following contributions were made:</p>
+    <ul>
+        <li>An <strong>architecture</strong> of a Distributed Semantic Social Network</li>
+        <li>Different <strong>application prototypes</strong> which verify and demonstrate this architecture</li>
+    </ul>
+</div>
+
+<div class="slide" id="architecture-principles-ld">
+    <h2>Architecture: Basic Principles</h2>
+    <p></p>
+    <ul>
+        <li>Linked Data
+            <ul>
+                <li>main protocol for data publishing, retrieval and integration</li>
+                <li>de-referencable and interlinked resources</li>
+                <li>fosters extensibility and a distributive overall character</li>
+            </ul>
+        </li>
+        <li>Service Decoupling</li>
+        <li>Protocol Minimalism</li>
+    </ul>
+</div>
+
+<div class="slide" id="architecture-principles-sd">
+    <h2>Architecture: Basic Principles</h2>
+    <p></p>
+    <ul>
+        <li>Linked Data</li>
+        <li>Service Decoupling
+            <ul>
+                <li>unravel services/application from the users data</li>
+                <li>settles ownership to the user</li>
+                <li>fosters privacy and pushes distribution</li>
+            </ul>
+        </li>
+        <li>Protocol Minimalism</li>
+    </ul>
+</div>
+
+<div class="slide" id="architecture-principles-pm">
+    <h2>Architecture: Basic Principles</h2>
+    <p></p>
+    <ul>
+        <li>Linked Data</li>
+        <li>Service Decoupling</li>
+        <li>Protocol Minimalism</li>
+            <ul>
+                <li>communicate RDF triples between DSSN nodes</li>
+                <li>do not enforce workflow or exact interpretation</li>
+                <li>ensures the extensibility of the data model</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="slide" id="architecture-picture">
+    <h2>Architecture: Big Picture</h2>
+    <figure>
+        <a href="images/Architecture2.svg"><img class="center nearlyall" src="images/Architecture2.png"></a>
+        <figcaption>In: S.Tramp et.al.: <a href="http://svn.aksw.org/papers/2011/SWJ_DSSN/public.pdf">An Architecture of a Distributed Semantic Social Network</a>, Semantic Web Journal, Special Issue "The Personal Social Semantic Web", 2012 (accepted pending minor revision)</figcaption>
+    </figure>
+</div>
 
 
 <div class="slide" id="thanks">
