@@ -43,7 +43,7 @@
 
 
 <div class="slide" id="title">
-    <h1>Distributed Semantic Social Networks</h1>
+    <h1>Distributed Semantic Social Networks:<br />Architecture and Applications</h1>
     <figure>
         <p></p>
         <!--This is a hack ... :(-->
@@ -59,7 +59,7 @@
     <h2>Current State of the Social Web</h2>
     <figure>
         <a href="images/xkcd.jpg"><img class="aquarterto center" src="images/xkcd.jpg" /></a>
-        <figcaption>Illustration by <a href="http://xkcd.com/802/">Randall Munroe</a> (Oktober 2009)</figcaption>
+        <figcaption>Illustration by <a href="http://xkcd.com/802/">Randall Munroe</a> (Oktober 2010)</figcaption>
     </figure>
 </div>
 
@@ -99,7 +99,7 @@
     <h2>Motivation</h2>
     <figure class="ahalf right">
         <a href="images/psn.png"><img class="ahalf center" src="images/psn.png"></a>
-        <figcaption>In 04/2011, the <a href="http://eu.playstation.com/psn/">PlayStation Network</a> had a security breach: user profiles were stolen and the network had a long downtime.</figcaption>
+        <figcaption>In 04/2011, the <a href="http://eu.playstation.com/psn/">PlayStation Network</a> had a security breach: 77mio user profiles were stolen and the network had a long downtime.</figcaption>
     </figure>
     <ul class="ahalf left">
         <li>Privacy</li>
@@ -139,7 +139,8 @@
     <p>Based on the given motivational points, the following contributions were made:</p>
     <ul>
         <li>An <strong>architecture</strong> of a Distributed Semantic Social Network</li>
-        <li>Different <strong>application prototypes</strong> which verify and demonstrate this architecture</li>
+        <li>An implementation of the architectures protocols</li>
+        <li>Implementation of different <strong>application prototypes</strong>, which verify and demonstrate this architecture</li>
     </ul>
 </div>
 
@@ -195,7 +196,7 @@
     <h2>Architecture: Big Picture</h2>
     <figure>
         <a href="images/Architecture2.svg"><img class="center nearlyall" src="images/Architecture2.png"></a>
-        <figcaption>In: S.Tramp et.al.: <a href="http://svn.aksw.org/papers/2011/SWJ_DSSN/public.pdf">An Architecture of a Distributed Semantic Social Network</a>, Semantic Web Journal, Special Issue "The Personal Social Semantic Web", 2012 (accepted pending minor revision)</figcaption>
+        <figcaption>In: S.Tramp et al.: <a href="http://svn.aksw.org/papers/2011/SWJ_DSSN/public.pdf">An Architecture of a Distributed Semantic Social Network</a>, Semantic Web Journal, Special Issue "The Personal Social Semantic Web", 2012 (accepted pending minor revision)</figcaption>
     </figure>
 </div>
 
@@ -263,7 +264,14 @@
         <a href="http://www.rand.org/publications/RM/RM3420/">On Distributed Communications (I)</a> (by Paul Baran - August 1964) via. <a href="http://dannyayers.com/2011/07/15/The-Symbiotic-Web">Danny Ayers</a>, via. <a href="http://personalpages.manchester.ac.uk/staff/m.dodge/cybergeography//atlas/historical.html">Historical Maps of Computer Networks</a>
         </figcaption>
     </figure>
-    <h3 class="slide">&rarr; Distributed Semantic Social Networks (DSSN)</h3>
+</div>
+
+<div class="slide" id="architecture-applicationlayer">
+    <h2>Architecture: Triple Distribution</h2>
+    <figure>
+        <a href="images/TripleCreation.png"><img class="center ahalf" src="images/TripleCreation.png"></a>
+        <figcaption>Scatter plot with logarithmic axes of related accounts vs. the number of created outgoing triples after one week of Social Network activity</figcaption>
+    </figure>
 </div>
 
 <div class="slide" id="xOperator">
@@ -286,7 +294,7 @@
     <h2>Mobile Social Semantic Web</h2>
     <figure>
         <a href="images/MSSW-Screenshots.png"><img class="center nearlyall" src="images/MSSW-Screenshots.png"></a>
-        <figcaption>Weaving a Distributed, Semantic Social Network for Mobile Users</figcaption>
+        <figcaption>Weaving a Distributed, Semantic Social Network for Mobile Users (different Android Screenshots)</figcaption>
     </figure>
 </div>
 
@@ -320,30 +328,64 @@
     </ul>
 </div>
 
-<div class="slide" id="publications">
-    <h2>Publications</h2>
-    <p>Directly related publications: 10 out of 30 (english, peer reviewed)</p>
+<div class="slide" id="publications-overwiew">
+    <h2>Publications: Overview</h2>
+    <ul>
+        <li>Number of publications:
+            <ul>
+                <li><a href="http://www.dblp.org/search/#query=author:sebastian_tramp:">DBLP: 21</a></li>
+                <li><a href="http://scholar.google.com/citations?user=pyV5evQAAAAJ">Google Scholar: 41</a></li>
+                <li><a href="http://bis.informatik.uni-leipzig.de/SebastianTramp">My Own list: 43</a></li>
+            </ul>
+        </li>
+        <li>Google Scholar Ranking:
+            <ul>
+                <li>Citations: 512</li>
+                <li>h-index: 9</li>
+                <li>i10-index: 8</li>
+            </ul>
+        </li>
+        <li>Directly related publications: 10 (english, peer reviewed)</li>
+    </ul>
+</div>
+
+<div class="slide" id="publications-related">
+    <h2>Publications: Related</h2>
     <p>Related major research papers are:</p>
     <ul>
-        <li>S.Tramp et.al.: <a href="http://svn.aksw.org/papers/2011/SWJ_DSSN/public.pdf">An Architecture of a Distributed Semantic Social Network</a>, Semantic Web Journal, 2012 (accepted pending minor revision)</li>
-        <li>S.Dietzold et.al: <a href="http://svn.aksw.org/papers/2010/EKAW_SemanticPingback/public.pdf">Weaving a Social Data Web with Semantic Pingback</a> In: Proceedings of the EKAW 2010 - Knowledge Engineering and Knowledge Management by the Masses, 2010</li>
-        <li>S.Dietzold et.al.: <a href="http://www.eswc2008.org/final-pdfs-for-web-site/aao-2.pdf">xOperator - Interconnecting the Semantic Web and Instant Messaging Networks</a> In: Proceedings of 5th European Semantic Web Conference 2008, 2008</li>
-        <li>S.Tramp et.al.: <a href="http://www.bibsonomy.org/bibtex/237daf6456c7455bf213449ad2fcfd915/aksw">Weaving a Distributed, Semantic Social Network for Mobile Users</a> In: Proceedings of the 9th Extended Semantic Web Conference 2011, 2011</li>
+        <li>S.Tramp et al.: <a href="http://svn.aksw.org/papers/2011/SWJ_DSSN/public.pdf">An Architecture of a Distributed Semantic Social Network</a>, Semantic Web Journal, 2012 (accepted pending minor revision)</li>
+        <li>S.Dietzold et al.: <a href="http://svn.aksw.org/papers/2010/EKAW_SemanticPingback/public.pdf">Weaving a Social Data Web with Semantic Pingback</a> In: Proceedings of the EKAW 2010 - Knowledge Engineering and Knowledge Management by the Masses, 2010</li>
+        <li>S.Dietzold et al.: <a href="http://www.eswc2008.org/final-pdfs-for-web-site/aao-2.pdf">xOperator - Interconnecting the Semantic Web and Instant Messaging Networks</a> In: Proceedings of 5th European Semantic Web Conference 2008, 2008</li>
+        <li>S.Tramp et al.: <a href="http://www.bibsonomy.org/bibtex/237daf6456c7455bf213449ad2fcfd915/aksw">Weaving a Distributed, Semantic Social Network for Mobile Users</a> In: Proceedings of the 9th Extended Semantic Web Conference 2011, 2011</li>
     </ul>
 </div>
 
 <div class="slide" id="publications-other">
     <h2>Publications</h2>
-    <p>Directly related publications: 10 out of 30 (english, peer reviewed)</p>
-    <p>Other related papers are (incl. co-author papers):</p>
+    <p>Other related publications are (incl. co-author papers):</p>
     <ul>
-        <li>H.Story et.al.: <a href="http://www.bibsonomy.org/bibtex/2445b82a81f10a62417821daa9b988048/aksw">Friending On The Social Web</a> In: Federated Social Web Europe 2011</li>
-        <li>S.Dietzold et.al.: <a href="http://www.bibsonomy.org/bibtex/2309657d02f047f95af55415fe0e0c706/aksw">RDFauthor - Employing RDFa for collaborative Knowledge Engineering</a> In: Proceedings of the EKAW 2010</li>
-        <li>T.Ermilov et.al: <a href="http://www.bibsonomy.org/bibtex/2ef3d1f56b1b9254376a0ba6ee216532e/aksw">OntoWiki Mobile - Knowledge Management in your Pocket</a> In: Proceedings of the ESWC 2011</li>
-        <li>N.Heino et.al.: <a href="http://www.bibsonomy.org/bibtex/2bb7746b8ddbae8740f509ca6cf3ee852/aksw">Developing Semantic Web Applications with the OntoWiki Framework</a> In: Networked Knowledge - Networked Media, 2009</li>
-        <li>S.Auer et.al: <a href="http://www.bibsonomy.org/bibtex/2adebb2cc068861ce489c3248f1a38a62/aksw">OntoWiki - A Tool for Social, Semantic Collaboration</a>. In: The Semantic Web - ISWC 2006</li>
+        <li>H.Story et al.: <a href="http://www.bibsonomy.org/bibtex/2445b82a81f10a62417821daa9b988048/aksw">Friending On The Social Web</a> In: Federated Social Web Europe 2011</li>
+        <li>S.Dietzold et al.: <a href="http://www.bibsonomy.org/bibtex/2309657d02f047f95af55415fe0e0c706/aksw">RDFauthor - Employing RDFa for collaborative Knowledge Engineering</a> In: Proceedings of the EKAW 2010</li>
+        <li>T.Ermilov et al.: <a href="http://www.bibsonomy.org/bibtex/2ef3d1f56b1b9254376a0ba6ee216532e/aksw">OntoWiki Mobile - Knowledge Management in your Pocket</a> In: Proceedings of the ESWC 2011</li>
+        <li>N.Heino et al.: <a href="http://www.bibsonomy.org/bibtex/2bb7746b8ddbae8740f509ca6cf3ee852/aksw">Developing Semantic Web Applications with the OntoWiki Framework</a> In: Networked Knowledge - Networked Media, 2009</li>
+        <li>S.Auer et al.: <a href="http://www.bibsonomy.org/bibtex/2adebb2cc068861ce489c3248f1a38a62/aksw">OntoWiki - A Tool for Social, Semantic Collaboration</a>. In: The Semantic Web - ISWC 2006</li>
     </ul>
 </div>
+
+<div class="slide" id="next-steps">
+    <h2>Next Steps</h2>
+    <ul>
+        <li><strong>Submit until 07/2012</strong></li>
+        <li>State of the current document:
+            <ul>
+                <li>130 pages but needs cleanup</li>
+                <li>90% of the work</li>
+                <li>Currently, I rework images and finish the architecture journal paper</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
 <div class="slide" id="thanks">
     <h2>Thank you for your Attention!</h2>
     <h3>My WebID:</h3>
