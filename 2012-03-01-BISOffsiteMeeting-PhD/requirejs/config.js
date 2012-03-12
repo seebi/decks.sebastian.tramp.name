@@ -12,7 +12,8 @@ require([
         "./requirejs/deck.goto.js",
         "./requirejs/deck.status.js",
         "./requirejs/deck.navigation.js",
-        "./requirejs/deck.hash.js"
+        "./requirejs/deck.hash.js",
+        "./requirejs/keynode.watch.js"
         ], function() {
             // Deck initialization-->
             $.deck('.slide');
