@@ -13,7 +13,7 @@ require([
         "https://github.com/imakewebthings/deck.js/raw/master/extensions/status/deck.status.js",
         "https://github.com/imakewebthings/deck.js/raw/master/extensions/navigation/deck.navigation.js",
         "https://github.com/imakewebthings/deck.js/raw/master/extensions/hash/deck.hash.js",
-        "https://raw.github.com/AKSW/KeyNode.js/master/watcher/keynode.watch.js"
+        "https://raw.github.com/AKSW/KeyNode.js/watcher/keynode.watch.js"
         ], function() {
             // Deck initialization-->
             $.deck('.slide');
