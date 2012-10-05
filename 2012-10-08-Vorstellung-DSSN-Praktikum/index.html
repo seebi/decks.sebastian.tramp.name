@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../deck.js/core/deck.core.css" />
     <link rel="stylesheet" href="../userthemes/aksw/style.css"
         id="style-theme-link" media="screen, projection" />
-    <style type="text/css">
+    <style type="text/css" media="screen and (max-width: 850px)">
         .deck-container .slide,
         .deck-container .deck-header,
         .deck-container .deck-footer
@@ -30,6 +30,8 @@
         .deck-container .deck-next-link
         {
             z-index: 9999;
+            top: auto;
+            bottom: 2em;
         }
         .deck-container .deck-prev-link
         {
@@ -39,8 +41,6 @@
         {
             right: 1em;
         }
-    </style>
-    <style type="text/css" media="screen and (max-width: 850px)">
         body.deck-container
         {
             font-size: 1.5em;
