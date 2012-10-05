@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+    <script
+        data-main="./requirejs/config"
+        src="./requirejs/require-jquery.js"></script>
+    <link
+        rel="stylesheet"
+        id="transition-theme-link"
+        href="../deck.js/themes/transition/fade.css" />
+
+    <link rel="stylesheet" href="../deck.js/core/deck.core.css" />
+    <link rel="stylesheet" href="../userthemes/aksw/style.css"
+        id="style-theme-link" media="screen, projection" />
+    <script src="../userthemes/aksw/script.js"></script>
+
+    <meta name="dcterms.creator" content="http://sebastian.tramp.name">
+    <meta name="dcterms.date" content="2012-10-08">
+    <meta name="author" content="Sebastian Tramp">
+    <title>Sebastian Tramp: Distributed Semantic Social Network Praktikum</title>
+    <link rel="stylesheet" href="local.css" />
+
+    <link rel="http://ns.aksw.org/keynode/canonical" href="http://seebi.github.com/deck.js/2012-10-08-Vorstellung-DSSN-Praktikum/" />
+    <link rel="http://ns.aksw.org/keynode/server" href="http://lod2.eu:9123" />
+    <link rel="http://ns.aksw.org/keynode/mailto" href="mailto:tramp@informatik.uni-leipzig.de" />
+</head>
+
+<body class="deck-container">
+
+<figure class="deck-header">
+    <span id="aksw-logo" class="hideme">
+        Agile Knowledge &amp; Semantic Web Research Group
+    </span>
+    <span class="title-from-current-deck">title</span>
+    <figcaption class="hideme">Header graphic, containing LSoM logo and title of the currently show slide</figcaption>
+</figure>
+
+
+<div class="slide" id="title">
+    <h1>Distributed Semantic Social Networks<br />Praktikum</h1>
+    <figure>
+        </ p>
+        <!--This is a hack ... :(-->
+        <figcaption>
+            <a href="http://sebastian.tramp.name">Sebastian Tramp</a> / <a href="http://aksw.org">AKSW</a>
+            @ <a href="http://bis.informatik.uni-leipzig.de/de/Lehre/1213/WS/LV/CW">Vorlesung Software aus Komponenten</a><br/>
+            08.10.2012
+        </figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="xkcd">
+    <h2>Current State of the Social Web</h2>
+    <figure>
+        <a href="images/xkcd.jpg"><img alt="xkcd comic" class="aquarterto center" src="images/xkcd.jpg" /></a>
+        <figcaption>Illustration by <a href="http://xkcd.com/802/">Randall Munroe</a> (Oktober 2010)</figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="webisshrinking">
+    <h2>Current State of the Social Web</h2>
+    <figure>
+         <a href="images/TheWebIsShrinking.png"><img alt="comScore chart" class="twothird center" src="images/TheWebIsShrinking.png"></a>
+         <figcaption>In:
+            <a href="http://allthingsd.com/20110623/the-web-is-shrinking-now-what/">The Web Is Shrinking. Now What?</a>
+            /
+            <a href="http://comscore.com">comScore study</a>
+        </figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="walled-gardens">
+    <h2>Current State of the Social Web</h2>
+    <figure>
+        <img alt="walled garden illustration" class="twothird center" src="images/walled-gardens.jpg">
+        <figcaption>Illustration by David Simonds, via <a href="http://www.w3.org/DesignIssues/CloudStorage.html">Design Issues: Socially Aware Cloud Storage</a> (by Tim Berners-Lee - August 2009)</figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="motivation">
+    <h2>Motivation</h2>
+    <ul>
+        <li>Privacy</li>
+        <li>Data Security</li>
+        <li>Data Ownership</li>
+        <li>Extensibility</li>
+        <li>Reliability</li>
+        <li>Freedom of Communication</li>
+    </ul>
+</div>
+
+<!-- Reliability: http://www.heise.de/newsticker/meldung/Facebook-war-teilweise-nicht-erreichbar-1465163.html -->
+
+<div class="slide" id="motivation-psn">
+    <h2>Motivation</h2>
+    <figure class="ahalf right">
+        <a href="images/psn.png"><img alt="logo" class="ahalf center" src="images/psn.png"></a>
+        <figcaption>In 04/2011, the <a href="http://eu.playstation.com/psn/">PlayStation Network</a> had a security breach: 77mio user profiles were stolen and the network had a long downtime.</figcaption>
+    </figure>
+    <ul class="ahalf left">
+        <li>Privacy</li>
+        <li><strong>Data Security</strong></li>
+        <li>Data Ownership</li>
+        <li>Extensibility</li>
+        <li><strong>Reliability</strong></li>
+        <li>Freedom of Communication</li>
+    </ul>
+</div>
+
+<div class="slide" id="motivation-freedom">
+    <h2>Motivation</h2>
+    <figure class="ahalf right">
+        <a href="images/Internet_blackholes.svg"><img alt="world map" class="center" src="images/Internet_blackholes.svg"></a>
+        <figcaption>
+            <a href="http://en.rsf.org/">Reporters without Borders</a>
+            maintain a <a href="http://en.rsf.org/IMG/pdf/Internet_enemies.pdf">"Enemies of the Internet"</a> list,
+            which currently (2011) consists of 10 countries with more than 450&nbsp;billion internet users.
+            In 2009, China blocked Twitter, Facebook and other Social Web pages because of
+            <a href="http://www.usatoday.com/tech/news/2009-06-02-china-twitter-tiananmen-protests_N.htm">political commentary</a>
+            and <a href="http://news.smh.com.au/breaking-news-technology/internet-activists-discuss-online-democracy-20091122-isc9.html">self organization</a>.
+        </figcaption>
+    </figure>
+    <ul class="ahalf left">
+        <li>Privacy</li>
+        <li>Data Security</li>
+        <li>Data Ownership</li>
+        <li>Extensibility</li>
+        <li>Reliability</li>
+        <li><strong>Freedom of Communication</strong></li>
+    </ul>
+</div>
+
+<div class="slide" id="approach">
+    <h2>Approach</h2>
+    <p>Based on the given motivational points, the following contributions exists:</p>
+    <ul>
+        <li>An <strong>architecture</strong> of a Distributed Semantic Social Network</li>
+        <li>Implementations of the architectures protocols</li>
+        <li>Implementation of different <strong>application prototypes</strong>, which verify and demonstrate this architecture</li>
+    </ul>
+</div>
+
+<div class="slide" id="architecture-principles-ld">
+    <h2>Architecture: Basic Principles I</h2>
+    </ p>
+    <ul>
+        <li><strong>Linked Data</strong>
+            <ul>
+                <li>main protocol for data publishing, retrieval and integration</li>
+                <li>de-referencable and interlinked resources</li>
+                <li>fosters extensibility and a distributive overall character</li>
+            </ul>
+        </li>
+        <li>Service Decoupling</li>
+        <li>Protocol Minimalism</li>
+    </ul>
+</div>
+
+<div class="slide" id="architecture-principles-sd">
+    <h2>Architecture: Basic Principles II</h2>
+    <ul>
+        <li>Linked Data</li>
+        <li><strong>Service Decoupling</strong>
+            <ul>
+                <li>unravel services / application from the users data</li>
+                <li>settles ownership to the user</li>
+                <li>fosters privacy and pushes distribution</li>
+            </ul>
+        </li>
+        <li>Protocol Minimalism</li>
+    </ul>
+</div>
+
+<div class="slide" id="architecture-principles-pm">
+    <h2>Architecture: Basic Principles III</h2>
+    <ul>
+        <li>Linked Data</li>
+        <li>Service Decoupling</li>
+        <li><strong>Protocol Minimalism</strong>
+            <ul>
+                <li>communicate RDF triples between DSSN nodes</li>
+                <li>do not enforce workflow or exact interpretation</li>
+                <li>ensures the extensibility of the data model</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="slide" id="architecture-picture">
+    <h2>Architecture: Big Picture</h2>
+    <figure>
+        <a href="images/Architecture2.svg"><img alt="architecture" class="center nearlyall" src="images/Architecture2.png"></a>
+        <figcaption>In: S.Tramp et al.: <a href="http://svn.aksw.org/papers/2011/SWJ_DSSN/public.pdf">An Architecture of a Distributed Semantic Social Network</a>, Semantic Web Journal, Special Issue "The Personal Social Semantic Web", 2012</figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="baran-networks">
+    <h2>Architecture</h2>
+    <figure>
+        <a href="images/baran_nets_large.gif"><img alt="baran network images" class="center nearlyall" src="images/baran_nets_large.gif"></a>
+        <figcaption>In:
+        <a href="http://www.rand.org/publications/RM/RM3420/">On Distributed Communications (I)</a> (by Paul Baran - August 1964) via. <a href="http://dannyayers.com/2011/07/15/The-Symbiotic-Web">Danny Ayers</a>, via. <a href="http://personalpages.manchester.ac.uk/staff/m.dodge/cybergeography//atlas/historical.html">Historical Maps of Computer Networks</a>
+        </figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="plug-computer">
+    <h2>Plug Computer</h2>
+    <figure>
+        <a href="images/SheevaPlug.png"><img alt="SheevaPlug" class="center nearlyall" src="images/SheevaPlug.png"></a>
+        <figcaption>Source:
+        <a href="http://www.cyrius.com/debian/kirkwood/sheevaplug/gallery.html">cyrius.com</a> (by Martin Michlmayr)
+        </figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="freedombox">
+    <h2>FreedomBox</h2>
+    <figure>
+        <a href="http://freedomboxfoundation.org/"><img alt="Freedom Box Logo Ideas" class="center nearlyall" src="images/FreedomBoxFlowers.jpg"></a>
+        <figcaption>Image Source:
+        <a href="http://joshuaspodek.com/freedombox-logo-designs">joshuaspodek.com</a> (by Joshua Spodek)
+        </figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="conclusion">
+    <h2>Conclusion</h2>
+    <ul>
+        <li>Play around with FreedomBox Installations
+            <ul><li>(in a virtual box or real)</li></ul>
+        </li>
+        <li>Enhance it with Semantic Technologies
+            <ul><li>(WebID, FOAF, Semantic Pingback)</li></ul>
+        </li>
+        <li>Build a Distributed Semantic Social Network</li>
+    </ul>
+</div>
+
+<div class="slide" id="organisatorisches1" lang="de">
+    <h2>Organisatorisches I</h2>
+    <ul>
+        <li>Prüfungsvorleistung oder Praktikumsmodul</li>
+        <li>3-4 Hackatons als Präsenzveranstaltungen</li>
+        <li>Dazwischen Selbstudium / Coding in Gruppen</li>
+        <li>PlugComputer im begrenzten Umfang vorhanden</li>
+    </ul>
+</div>
+<div class="slide" id="organisatorisches2" lang="de">
+    <h2>Organisatorisches II</h2>
+    <ul>
+        <li>Einführungsveranstaltung
+            <ul><li><strong>11.10.2012 13:15 – 14:45 Uhr in P702</strong></li></ul>
+        </li>
+        <li>Einschreibung im Olat</li>
+    </ul>
+</div>
+
+<div class="slide" id="thanks">
+    <h2>Thank you for your Attention!</h2>
+    <h3>My WebID:</h3>
+    <ul><li><a href="http://sebastian.tramp.name">http://sebastian.tramp.name</a></li></ul>
+    <h3>This slide deck:</h3>
+    <ul><li><a href="http://seebi.github.com/deck.js/2012-10-08-Vorstellung-DSSN-Praktikum/">http://seebi.github.com/deck.js/2012-10-08-Vorstellung-DSSN-Praktikum/</a></li></ul>
+</div>
+
+
+<!-- DECKJS STUFF - NO SLIDES FROM HERE -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<figure class="deck-footer">
+    <div class="deck-status">
+        <span class="deck-status-current">1</span>
+        <span>/</span>
+        <span class="deck-status-total">x</span>
+    </div>
+    <div class="deck-meta">
+        <span class="deck-meta-title">title</span>
+        <span class="deck-meta-date">date</span>
+        <span>|</span>
+        <span class="deck-meta-author">author</span>
+    </div>
+    <figcaption class="hideme">Footer graphic, containing site number, presentation title, author and date.</figcaption>
+</figure>
+
+</body>
+</html>
