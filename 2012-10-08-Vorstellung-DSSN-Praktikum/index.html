@@ -113,7 +113,7 @@
 
 <div class="slide" id="motivation">
     <h2>Motivation</h2>
-    <ul>
+    <ul class="ahalf left">
         <li>Privacy</li>
         <li>Data Security</li>
         <li>Data Ownership</li>
@@ -123,7 +123,6 @@
     </ul>
 </div>
 
-<!-- Reliability: http://www.heise.de/newsticker/meldung/Facebook-war-teilweise-nicht-erreichbar-1465163.html -->
 
 <div class="slide" id="motivation-psn">
     <h2>Motivation</h2>
@@ -132,8 +131,25 @@
         <figcaption>In 04/2011, the <a href="http://eu.playstation.com/psn/">PlayStation Network</a> had a security breach: 77mio user profiles were stolen and the network had a long downtime.</figcaption>
     </figure>
     <ul class="ahalf left">
-        <li>Privacy</li>
+        <li><strong>Privacy</strong></li>
         <li><strong>Data Security</strong></li>
+        <li>Data Ownership</li>
+        <li>Extensibility</li>
+        <li>Reliability</li>
+        <li>Freedom of Communication</li>
+    </ul>
+</div>
+
+<!-- Reliability: http://www.heise.de/newsticker/meldung/Facebook-war-teilweise-nicht-erreichbar-1465163.html -->
+<div class="slide" id="motivation-fb">
+    <h2>Motivation</h2>
+    <figure class="ahalf right">
+        <a href="images/psn.png"><img alt="logo" class="ahalf center" src="images/fb.png"></a>
+        <figcaption>In 03/2012, <a href="http://www.zdnet.com/blog/facebook/facebook-is-down-in-europe/10080"><code>facebook.com</code> was down for a few hours</a> in some countries in Europe, Middle East and Africa due to a DNS issue.</figcaption>
+    </figure>
+    <ul class="ahalf left">
+        <li>Privacy</li>
+        <li>Data Security</li>
         <li>Data Ownership</li>
         <li>Extensibility</li>
         <li><strong>Reliability</strong></li>
@@ -162,6 +178,16 @@
         <li>Reliability</li>
         <li><strong>Freedom of Communication</strong></li>
     </ul>
+</div>
+
+<div class="slide" id="baran-networks">
+    <h2>Architecture</h2>
+    <figure>
+        <a href="images/baran_nets_large.gif"><img alt="baran network images" class="center nearlyall" src="images/baran_nets_large.gif"></a>
+        <figcaption>In:
+        <a href="http://www.rand.org/publications/RM/RM3420/">On Distributed Communications (I)</a> (by Paul Baran - August 1964) via. <a href="http://dannyayers.com/2011/07/15/The-Symbiotic-Web">Danny Ayers</a>, via. <a href="http://personalpages.manchester.ac.uk/staff/m.dodge/cybergeography//atlas/historical.html">Historical Maps of Computer Networks</a>
+        </figcaption>
+    </figure>
 </div>
 
 <div class="slide" id="approach">
@@ -213,7 +239,7 @@
         <li><strong>Protocol Minimalism</strong>
             <ul>
                 <li>communicate RDF triples between DSSN nodes</li>
-                <li>do not enforce workflow or exact interpretation</li>
+                <li>do not enforce workflow or data interpretation</li>
                 <li>ensures the extensibility of the data model</li>
             </ul>
         </li>
@@ -225,16 +251,6 @@
     <figure>
         <a href="images/Architecture2.svg"><img alt="architecture" class="center nearlyall" src="images/Architecture2.png"></a>
         <figcaption>In: S.Tramp et al.: <a href="http://svn.aksw.org/papers/2011/SWJ_DSSN/public.pdf">An Architecture of a Distributed Semantic Social Network</a>, Semantic Web Journal, Special Issue "The Personal Social Semantic Web", 2012</figcaption>
-    </figure>
-</div>
-
-<div class="slide" id="baran-networks">
-    <h2>Architecture</h2>
-    <figure>
-        <a href="images/baran_nets_large.gif"><img alt="baran network images" class="center nearlyall" src="images/baran_nets_large.gif"></a>
-        <figcaption>In:
-        <a href="http://www.rand.org/publications/RM/RM3420/">On Distributed Communications (I)</a> (by Paul Baran - August 1964) via. <a href="http://dannyayers.com/2011/07/15/The-Symbiotic-Web">Danny Ayers</a>, via. <a href="http://personalpages.manchester.ac.uk/staff/m.dodge/cybergeography//atlas/historical.html">Historical Maps of Computer Networks</a>
-        </figcaption>
     </figure>
 </div>
 
@@ -262,10 +278,10 @@
     <h2>Conclusion</h2>
     <ul>
         <li>Play around with FreedomBox Installations
-            <ul><li>(in a virtual box or real)</li></ul>
+            <ul><li>in a virtual box or real</li></ul>
         </li>
         <li>Enhance it with Semantic Technologies
-            <ul><li>(WebID, FOAF, Semantic Pingback)</li></ul>
+            <ul><li>WebID, FOAF, Semantic Pingback</li></ul>
         </li>
         <li>Build a Distributed Semantic Social Network</li>
     </ul>
