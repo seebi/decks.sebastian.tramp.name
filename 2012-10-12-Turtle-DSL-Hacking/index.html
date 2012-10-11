@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+    <script
+        data-main="./requirejs/config"
+        src="./requirejs/require-jquery.js"></script>
+    <link
+        rel="stylesheet"
+        id="transition-theme-link"
+        href="../deck.js/themes/transition/fade.css" />
+
+    <link rel="stylesheet" href="../deck.js/core/deck.core.css" />
+    <link rel="stylesheet" href="../userthemes/aksw/style.css"
+        id="style-theme-link" media="screen, projection" />
+    <style type="text/css" media="screen and (max-width: 1000px)">
+        .deck-container .slide,
+        .deck-container .deck-header,
+        .deck-container .deck-footer
+        {
+            right: 0 !important;
+            left: 0 !important;
+        }
+        .deck-container .deck-prev-link,
+        .deck-container .deck-next-link
+        {
+            z-index: 9999;
+            top: auto;
+            bottom: 2em;
+        }
+        .deck-container .deck-prev-link
+        {
+            left: 1em;
+        }
+        .deck-container .deck-next-link
+        {
+            right: 1em;
+        }
+        body.deck-container
+        {
+            font-size: 1.5em;
+        }
+    </style>
+    <script src="../userthemes/aksw/script.js"></script>
+
+    <meta name="dcterms.creator" content="http://sebastian.tramp.name">
+    <meta name="dcterms.date" content="2012-10-12">
+    <meta name="author" content="Sebastian Tramp">
+    <title>Sebastian Tramp: Turtle DLS Hacking @ ITEMIS Leipzig</title>
+    <link rel="stylesheet" href="local.css" />
+
+    <link rel="http://ns.aksw.org/keynode/canonical" href="http://seebi.github.com/deck.js/2012-10-12-Turtle-DSL-Hacking/" />
+    <link rel="http://ns.aksw.org/keynode/server" href="http://lod2.eu:9123" />
+    <link rel="http://ns.aksw.org/keynode/mailto" href="mailto:tramp@informatik.uni-leipzig.de" />
+</head>
+
+<body class="deck-container">
+
+<figure class="deck-header">
+    <span id="aksw-logo" class="hideme">
+        Agile Knowledge &amp; Semantic Web Research Group
+    </span>
+    <span class="title-from-current-deck">title</span>
+    <figcaption class="hideme">Header graphic, containing AKSW logo and title of the currently show slide</figcaption>
+</figure>
+
+
+<div class="slide" id="title">
+    <h1>Turtle<br />DSL Hacking</h1>
+    <figure>
+        </ p>
+        <!--This is a hack ... :(-->
+        <figcaption>
+            <a href="http://sebastian.tramp.name">Sebastian Tramp</a> / <a href="http://aksw.org">AKSW</a>
+            @ <a href="http://www.itemis.de/itemis-ag/unternehmen/standorte/language=de/575/leipzig">ITEMIS Leipzig</a><br/>
+            12.10.2012
+        </figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="toc">
+    <h2>Outline</h2>
+    <h3>AKSW Research Group</h3>
+    <h3>Turtle Introduction</h3>
+</div>
+
+<div class="slide" id="aksw-orga">
+    <h2>AKSW Orga</h2>
+    <ul>
+        <li>Hosted at Chair Business Information Systems (at IfI at UniLeipzig) as well as InfAI </li>
+        <li>Sub Groups:
+            <ul>
+                <li>Emergent Semantics</li>
+                <li>Semantic Abstraction</li>
+                <li>Machine Learning and Ontology Engineering</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="slide" id="aksw-history">
+    <h2>AKSW History</h2>
+    <ul>
+        <li>Founded in 2006 by Sören Auer, Thomas Riechert and Sebastian Tramp</li>
+        <li>First Project was the BMBF funded SoftWiki</li>
+        <li>Now a research group with over 25 members from 10 countries </li>
+        <li>Mostly EU funded</li>
+    </ul>
+</div>
+
+<div class="slide" id="es-areas">
+    <h2>Emergent Semantics</h2>
+    <h3>Research Areas</h3>
+    <ul>
+        <li>Agile Knowledge Engineering</li>
+        <li>Federated Social Networks</li>
+        <li>Linked Data</li>
+        <li>Semantic Software Engineering</li>
+        <li>Semantic Web Infrastructure</li>
+    </ul>
+</div>
+
+<div class="slide" id="es-projects">
+    <h2>Emergent Semantics</h2>
+    <h3>Projects (selection)</h3>
+    <ul>
+        <li>DSSN - An Architecture of a Distributed Semantic Social Network</li>
+        <li>Erfurt - PHP5 / Zend based Semantic Web API for Social Semantic Software</li>
+        <li><strong>LOD2 - Creating Knowledge out of Interlinked Data</strong></li>
+        <li><strong>LinkedGeoData - adds a spatial dimension to the Web of Data</strong></li>
+        <li>OntoWiki - a tool providing support for agile, distributed knowledge engineering scenarios</li>
+        <li>RDFaCE - RDFa Content Editor</li>
+        <li>Catalogus Professorum - Leipzig Professors Catalog</li>
+    </ul>
+</div>
+
+<div class="slide" id="simba-areas">
+    <h2>SIMBA - Semantic Abstraction</h2>
+    <h3>Research Areas</h3>
+    <ul>
+        <li>Extraction of RDF and OWL from unstructured data</li>
+        <li>Link Discovery</li>
+        <li>Machine Learning</li>
+        <li>Natural Language Processing</li>
+    </ul>
+</div>
+
+<div class="slide" id="simba-projects">
+    <h2>SIMBA - Semantic Abstraction</h2>
+    <h3>Projects (selection)</h3>
+    <ul>
+        <li>BOA - BOotstrapping linked datA</li>
+        <li><strong>FOX - Federated knOwledge eXtraction Framework</strong></li>
+        <li><strong>LIMES - LInk discovery framework for MEtric Spaces</strong></li>
+        <li>SCMS - Semantic Content Management Systems</li>
+        <li>SINA - Semantically INterpreting user query towards question-Answering</li>
+        <li>BorderFlow - a general-purpose graph clustering tool</li>
+        <li>ALOE - Assisted Linked Data Consumption Engine</li>
+    </ul>
+</div>
+
+<div class="slide" id="mole-projects">
+    <h2>MOLE - Machine Learning and Ontology Engineering</h2>
+    <h3>Projects (selection)</h3>
+    <ul>
+        <li><strong>DBpedia - Querying Wikipedia like a Semantic Database</strong></li>
+        <li><strong>DL-Learner - a tool for supervised Machine Learning in OWL and Description Logics</strong></li>
+        <li>LATC - LOD Around-the-Clock</li>
+        <li>NKE - a light-weight methodology for low-cost knowledge engineering</li>
+        <li>ORE - A tool for debugging and enriching OWL knowledge bases</li>
+        <li>AutoSPARQL - Convert a natural language expression to a SPARQL query</li>
+    </ul>
+</div>
+
+<div class="slide" id="turtle">
+    <h2>Turtle - Terse RDF Triple Language</h2>
+    <p>The Resource Description Framework (RDF) is a general-purpose language for representing information in the Web.</p>
+    <p>Turtle is a language to write RDF graphs in a compact form.</p>
+</div>
+
+<div class="slide" id="rdf-concepts1">
+    <h2>RDF Concepts I</h2>
+    <p>Turtle is an RDF Syntax. The most important RDF concepts are</p>
+    <ul>
+        <li>A graph is a set of statements.</li>
+        <li>A statement is a tupel of subject, predicate and object terms.</li>
+        <li>A term can be a resource, a blank node and a literal.</li>
+    </ul>
+</div>
+
+<div class="slide" id="rdf-concepts2">
+    <h2>RDF Concepts II</h2>
+    <ul>
+        <li>A resource is identified by an IRI.</li>
+        <li>A literal is a string with an optional datatype OR language tag.</li>
+        <li>A blank node is just like a resource but without IRI.</li>
+    </ul>
+</div>
+
+
+<div class="slide" id="RDF-Syntax">
+    <h2>RDF Import / Parser</h2>
+    <p>RDF can be serialized in different syntax. Widely in use are:</p>
+    <ul>
+        <li><strong><a href="http://www.w3.org/TR/REC-rdf-syntax/">RDF/XML</a>, 1999 (2004, revised W3C recommendation)</strong></li>
+        <li><strong><a href="http://www.w3.org/2001/sw/RDFCore/ntriples/">N-Triples</a>, 2001 (internal W3C working draft)</strong></li>
+        <li><strong><a href="http://www.w3.org/TeamSubmission/turtle/">Turtle</a>, 2011 (W3C member submission)</strong></li>
+    </ul>
+    <p>But there are many more: 
+        <a href="http://www.w3.org/DesignIssues/Notation3.html">N3</a>, (2005, spec TBL),
+        <a href="http://www.hpl.hp.com/techreports/2004/HPL-2004-56.html">TriX</a> (2004, by HP),
+        <a href="http://www.w3.org/TR/grddl/">GRDDL</a> (2007),
+        <a href="http://docs.api.talis.com/platform-api/output-types/rdf-json">RDF/JSON</a> (2008 by Talis),
+        <a href="http://www.w3.org/TR/rdfa-syntax/">RDFa</a> (2008)
+</div>
+
+<div class="slide" id="RDF-Syntax-venn">
+    <h2>RDF Serializations</h2>
+    <figure>
+        <a href="http://www.w3.org/DesignIssues/diagrams/n3/venn">
+            <img alt="venn diagram if rdf syntaxes" class="center" src="images/venn.svg" />
+        </a>
+            <figcaption>http://www.w3.org/DesignIssues/diagrams/n3/venn</figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="RDF-syntax-turtle">
+    <h2>Syntax: Turtle / N3</h2>
+    <p>Three simple triples &hellip;</p>
+    <pre class="brush: turtle">
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+
+&lt;http://sebastian.tramp.name&gt; a foaf:Person;
+    foaf:workInfoHomepage &lt;http://aksw.org/SebastianTramp&gt;;
+    rdfs:label "Sebastian Tramp".
+    </pre>
+</div>
+
+<div class="slide" id="RDF-syntax-xml">
+    <h2>Syntax: RDF / XML</h2>
+    <p>&hellip; can look &hellip;</p>
+    <pre class="brush: xml">
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;rdf:RDF
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"&gt;
+  &lt;foaf:Person rdf:about="http://sebastian.tramp.name"&gt;
+    &lt;rdfs:label&gt;Sebastian Tramp&lt;/rdfs:label&gt;
+    &lt;foaf:workInfoHomepage rdf:resource="http://aksw.org/SebastianTramp"/&gt;
+  &lt;/foaf:Person&gt;
+&lt;/rdf:RDF&gt;
+    </pre>
+</div>
+
+<div class="slide" id="RDF-syntax-json">
+    <h2>Syntax: RDF / JSON</h2>
+    <p>&hellip; soooo different.</p>
+    <pre class="brush: json">
+{
+  "http://sebastian.tramp.name" : {
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+        "value" : "http://xmlns.com/foaf/0.1/Person",
+        "type" : "uri"
+        }
+
+      ],
+    "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+        "value" : "Sebastian Tramp",
+        "type" : "literal"
+        }
+
+      ],
+    "http://xmlns.com/foaf/0.1/workInfoHomepage" : [ {
+        "value" : "http://aksw.org/SebastianTramp",
+        "type" : "uri"
+        }
+
+      ]
+    }
+  }
+    </pre>
+</div>
+
+<div class="slide" id="RDF-syntax-turtle-desc">
+    <h2>Syntax: Turtle</h2>
+    <pre class="brush: turtle">
+@prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+
+&lt;http://sebastian.tramp.name&gt; a foaf:Person;
+    foaf:workInfoHomepage &lt;http://aksw.org/SebastianTramp&gt;;
+    foaf:knows [
+        a foaf:Person;
+        rdfs:label "Roland Mücke"
+    ].
+    rdfs:label "Sebastian Tramp", "Seebi".
+    </pre>
+    <p>Turtle allows for prefix declarations, multiple abbrevations  as well as nested descriptions.
+        Turtle uses UTF-8 for content encoding and is specified by an
+        <a href="http://www.w3.org/TeamSubmission/turtle/#sec-grammar-grammar">EBNF</a>.</p>
+</div>
+
+<div class="slide" id="vim-screeni">
+    <h2>Turtle in VIM</h2>
+    <figure>
+        <a href="https://github.com/seebi/semweb.vim">
+            <img alt="screenshot" class="center" src="images/vim.png" />
+        </a>
+        <figcaption>vim syntax hightlightning with some autocompletion as <a href="https://github.com/seebi/semweb.vim">semweb.vim</a></figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="thanks">
+    <h2>Thank you for your Attention!</h2>
+    <h3>My WebID:</h3>
+    <ul><li><a href="http://sebastian.tramp.name">http://sebastian.tramp.name</a></li></ul>
+    <h3>This slide deck:</h3>
+    <ul><li><a href="http://seebi.github.com/deck.js/2012-10-12-Turtle-DSL-Hacking/">http://seebi.github.com/deck.js/2012-10-12-Turtle-DSL-Hacking/</a></li></ul>
+</div>
+
+
+<!-- DECKJS STUFF - NO SLIDES FROM HERE -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<figure class="deck-footer">
+    <div class="deck-status">
+        <span class="deck-status-current">1</span>
+        <span>/</span>
+        <span class="deck-status-total">x</span>
+    </div>
+    <div class="deck-meta">
+        <span class="deck-meta-title">title</span>
+        <span class="deck-meta-date">date</span>
+        <span>|</span>
+        <span class="deck-meta-author">author</span>
+    </div>
+    <figcaption class="hideme">Footer graphic, containing site number, presentation title, author and date.</figcaption>
+</figure>
+
+</body>
+</html>
