@@ -32,7 +32,11 @@
 </figure>
 
 <div class="slide" id="title">
-    <h1>Softwaretechnik-Praktikum<span class="subtitle">Version Control with git</span></h1>
+    <h1>Version Control with git
+        <span class="subtitle">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" alt="git logo" />
+        </span>
+    </h1>
     <figure>
         <!--This is a hack ... :(-->
         <figcaption>
@@ -41,6 +45,133 @@
     </figure>
 </div>
 
+<div class="slide" id="quote">
+    <h2>Wikipedia Quote</h2>
+    <blockquote>
+        Git (/ɡɪt/) is a distributed revision control and source code management (SCM) system with an emphasis on speed.
+        Git was initially designed and developed by Linus Torvalds for Linux kernel development
+    </blockquote>
+</div>
+
+<div class="slide" id="dist-cs-central">
+    <h2>Distributed vs. Centralized</h2>
+    <ul>
+        <li>Centralized (Subversion, CVS, &hellip;)
+            <ul>
+                <li>developers send all changes to a central repository</li>
+                <li>the repository does access control</li>
+                <li>only one version of a repository is available</li>
+            </ul>
+        </li>
+        <li>Distributed (git, mercurial, darc, &hellip;)
+            <ul>
+                <li>every developer has a complete copy of the repository</li>
+                <li>changes can be send to each developer</li>
+                <li>complete history of all files is available locally</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="slide" id="concepts1">
+    <h2>Concepts I</h2>
+    <ul>
+        <li><strong>Repository</strong> - the history, different versions, branches and tags of a project, local or remote</li>
+        <li><strong>Working Tree</strong> - a materialization of a specific revision in the filesystem, maybe changed by you</li>
+        <li><strong>Commit</strong> - a specific revision which can be checkout as a working tree, identified by a hash</li>
+        <li><strong>Remote</strong> - a named remote repository, sometimes called upstream repository, identified by a URL and name</li>
+    </ul>
+</div>
+
+<div class="slide" id="concepts2">
+    <h2>Concepts II</h2>
+    <ul>
+        <li><strong>branch</strong> - a separate code line with its own history
+            <ul>
+                <li>local branch - in your repository</li>
+                <li>remote branch - in someone else repository (in combination with a remote)</li>
+                <li><a href="http://gitready.com/beginner/2009/03/09/remote-tracking-branches.html">remote-tracking branch</a> - a local branch with a link to a remote branch</li>
+            </ul>
+        </li>
+        <li><strong>tag</strong> - a named revision</li>
+        <li><strong>HEAD</strong> - a local tag for the revision which is currently used as working tree</li>
+    </ul>
+</div>
+
+<div class="slide" id="concepts3">
+    <h2>Concepts III</h2>
+    <p>Stash vs. Workspace vs. Index
+    <ul>
+        <li><strong>Working Tree</strong> - the files and changes you see in your IDE / Editor</li>
+        <li><strong>Index</strong> - the changed files you've selected for the new commit / revision</li>
+        <li><strong>Stash</strong> - The changed files you've laid aside for later use (e.g. for after the checkout)</li>
+    </ul>
+</div>
+
+
+<div class="slide" id="workflow-simple-changes">
+    <h2>Basic Workflow: Simple Changes</h2>
+    <p>After cloning the repository:</p>
+    <ul>
+        <li><code>checkout</code> a specific revision, tag or branch</li>
+        <li>change some files with your IDE / editor</li>
+        <li><code>add</code> files to the index</li>
+        <li><code>commit</code> changes to your local repository</li>
+        <li><code>push</code> revisions to a remote repository</li>
+    </ul>
+    <p>&hellip;followed by a demonstration</p>
+</div>
+
+<div class="slide" id="workflow-file-lifecycle">
+    <h2>Basic Workflow: File Status Lifecycle</h2>
+    <figure class="centered">
+        <a href="http://git-scm.com/book/en/Git-Basics-Recording-Changes-to-the-Repository">
+            <img
+                class="nearlyall"
+                alt="File status lifecycle" 
+                src="http://git-scm.com/figures/18333fig0201-tn.png" />
+        </a>
+        <figcaption>File status lifecycle - In: Git Basics - Recording Changes to the Repository</figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="workflow-local-feature-branch">
+    <h2>Basic Workflow: Local Feature Branch</h2>
+    <p>After cloning the repository:</p>
+    <ul>
+        <li><code>checkout</code> the base for your feature branch</li>
+        <li><code>branch</code> your feature branch out</li>
+        <li><code>commit</code> multiple commits</li>
+        <li><code>rebase</code> the feature branch on the master</li>
+        <li><code>merge</code> the feature branch into the master</li>
+    </ul>
+    <p>&hellip;followed by a demonstration</p>
+</div>
+
+<div class="slide" id="workflow-other-tasks">
+    <h2>Basic Workflow: Other Tasks</h2>
+    <p>After cloning the repository:</p>
+    <ul>
+        <li>create and use <code>remote</code> repositories</li>
+        <li><code>fetch</code> and <code>pull</code> remote changes</li>
+        <li>create and use subrepositories</li>
+        <li><code>tag</code> revisions for versioning</li>
+    </ul>
+    <p>&hellip;followed by a demonstration</p>
+</div>
+
+
+<div class="slide" id="resources">
+    <h2>Resources</h2>
+    <p>Some useful resources for git users:</p>
+    <ul>
+        <li><a href="http://sixrevisions.com/resources/git-tutorials-beginners/">Top 10 Git Tutorials for Beginners</a></li>
+        <li><a href="http://www.ndpsoftware.com/git-cheatsheet.html">Interactive Graphical Cheatsheet</a> (&lt; extremely useful)</li>
+        <li><a href="http://git-scm.com/docs">Official Git Reference</a></li>
+        <li><a href="http://gitready.com/">gitready - a git hints blog</a></li>
+        <li><a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful git branching model</a></li>
+    </ul>
+</div>
 
 
 <div class="slide" id="thanks">
