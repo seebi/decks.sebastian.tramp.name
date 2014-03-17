@@ -185,7 +185,7 @@
     <ul>
         <li>Suchmaschinen dominierter Versuch, eine 'Ontologie für das Web' zu erstellen</li>
         <li>Logischerweise, kein long tail, aber wichtige erste Konzepte
-        <a title="By User:Husky (Own work) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ALong_tail.svg"><img width="512" alt="Long tail" src="images/512px-Long_tail.svg.png"/></a>
+        <a title="By User:Husky (Own work) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ALong_tail.svg"><img width="512" alt="Long tail" src="images/512px-Long_tail.png"/></a>
         </li>
         <li>Produkte, Events, Ratings, Offers, Person, ... <a href="http://schema.org/docs/full.html">and more</a>
         <li>Hauptvorteil: Google, Bing, Yahoo und Yandex habe sich dieser Ontologie commited</li>
@@ -225,16 +225,19 @@
     <p>Beispiel 2 zeigt, wie zusätzlich zu einfachen Literal Werten, ein benannter Link erzeugt wird (copyrightHolder), welcher eine Klasse und einen Namen bekommt.</p>
     <pre>
 &lt;article itemscope itemtype="http://schema.org/Article"&gt;
-    &lt;h1 itemprop="name"&gt;Fahnder suchen ...&lt;/h1&gt;
-    &lt;p itemprop="text"&gt;Lorem ipsum dolor sit amet, ...&lt;/p&gt;
-    &lt;p&gt;
-        copyright &lt;span itemprop="copyrightYear">2014&lt;/span&gt; by
-        &lt;!-- Hinweis: Hier wird ein neues Subjekt angelegt welche Objekt von copyrightHolder ist --&gt;
-        &lt;span itemprop="copyrightHolder" itemscope itemtype="http://schema.org/Organization"&gt;
-        &lt;!-- Hinweis: Das attribut name bezieht sich jetzt schon auf das neue Subjekt --&gt;
-        &lt;span itemprop="name">Spiegel&lt;/span&gt;
-    &lt;/span&gt;
-    &lt;/p&gt;
+  &lt;h1 itemprop="name"&gt;Fahnder suchen ...&lt;/h1&gt;
+  &lt;p itemprop="text"&gt;Lorem ipsum dolor sit amet, ...&lt;/p&gt;
+  &lt;p&gt;
+    copyright &lt;span itemprop="copyrightYear">2014&lt;/span&gt; by
+    &lt;!-- Hinweis: Hier wird ein neues Subjekt angelegt welche
+      Objekt von copyrightHolder ist --&gt;
+    &lt;span itemprop="copyrightHolder" itemscope
+      itemtype="http://schema.org/Organization"&gt;
+    &lt;!-- Hinweis: Das attribut name bezieht sich jetzt schon
+      auf das neue Subjekt --&gt;
+    &lt;span itemprop="name">Spiegel&lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
 &lt;/article&gt;
     </pre>
 </div>
