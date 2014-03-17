@@ -206,17 +206,38 @@
     <h2>schema.org - microdata Beispiel</h2>
     <p>Wichtige Tags sind <code>itemscope</code>, <code>itemtype</code> und <code>itemprop</code></p>
     <pre>
+&lt;!-- Hinweis: Das <a href="http://schema.org/docs/gs.html#microdata_itemscope_itemtype">itemscope</a> Attribut startet ein neues Subjekt --&gt;
+&lt;!-- Hinweis: Mit <a href="http://schema.org/docs/gs.html#microdata_itemscope_itemtype">itemtype</a> wird einem Subjekt eine Klasse zugeordnet --&gt;
 &lt;p itemscope itemtype="<a href="http://schema.org/Person">http://schema.org/Person</a>"&gt;
   Guten Tag, mein Name ist
+    &lt;!-- Hinweis: Mit <a href="http://schema.org/docs/gs.html#microdata_itemprop">itemprop</a> werden Attribute zugeordnet --&gt;
     &lt;span itemprop="name"&gt;Sebastian Tramp&lt;/span&gt;.
 &lt;/p&gt;
     </pre>
     <ul>
+        <li><a href="http://www.google.com/webmasters/tools/richsnippets">Google rich snippet tester</a> (Referenz für das Praktikum)</li>
         <li><a href="https://webmaster.yandex.com/microtest.xml">Yandex microdata tester</a></li>
-        <li><a href="http://www.google.com/webmasters/tools/richsnippets">Google rich snippet tester</a></li>
     </ul>
 </div>
 
+<div class="slide" id="schemaorg-microdata-example2">
+    <h2>schema.org - microdata Beispiel 2</h2>
+    <p>Beispiel 2 zeigt, wie zusätzlich zu einfachen Literal Werten, ein benannter Link erzeugt wird (copyrightHolder), welcher eine Klasse und einen Namen bekommt.</p>
+    <pre>
+&lt;article itemscope itemtype="http://schema.org/Article"&gt;
+    &lt;h1 itemprop="name"&gt;Fahnder suchen ...&lt;/h1&gt;
+    &lt;p itemprop="text"&gt;Lorem ipsum dolor sit amet, ...&lt;/p&gt;
+    &lt;p&gt;
+        copyright &lt;span itemprop="copyrightYear">2014&lt;/span&gt; by
+        &lt;!-- Hinweis: Hier wird ein neues Subjekt angelegt welche Objekt von copyrightHolder ist --&gt;
+        &lt;span itemprop="copyrightHolder" itemscope itemtype="http://schema.org/Organization"&gt;
+        &lt;!-- Hinweis: Das attribut name bezieht sich jetzt schon auf das neue Subjekt --&gt;
+        &lt;span itemprop="name">Spiegel&lt;/span&gt;
+    &lt;/span&gt;
+    &lt;/p&gt;
+&lt;/article&gt;
+    </pre>
+</div>
 
 <div class="slide" id="magento">
     <h2>Magento</h2>
@@ -354,21 +375,21 @@
 <div class="slide" id="vcs-merging">
     <h2>Merging</h2>
     <figure>
-        <a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/"><img alt="merging" src="images/vcs-merging"></a>
+        <a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/"><img alt="merging" src="images/vcs-merging.png"></a>
         <figcaption>In: <a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/">A Visual Guide to Version Control</a></figcaption>
     </figure>
 </div>
 <div class="slide" id="vcs-conflict">
     <h2>Conflict</h2>
     <figure>
-        <a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/"><img alt="conflict" src="images/vcs-conflict"></a>
+        <a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/"><img alt="conflict" src="images/vcs-conflict.png"></a>
         <figcaption>In: <a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/">A Visual Guide to Version Control</a></figcaption>
     </figure>
 </div>
 <div class="slide" id="vcs-tagging">
     <h2>Tagging</h2>
     <figure>
-        <a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/"><img alt="tagging" src="images/vcs-tagging"></a>
+        <a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/"><img alt="tagging" src="images/vcs-tagging.png"></a>
         <figcaption>In: <a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/">A Visual Guide to Version Control</a></figcaption>
     </figure>
 </div>
