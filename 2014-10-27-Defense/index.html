@@ -48,30 +48,6 @@
     <div class="step overview" data-x="1300" data-y="1800" data-z="0" data-scale="7">
     </div>
 
-    <!--div class="step slide" data-x="0" data-y="0" data-z="-1000">
-        <h1>Structure of this Talk</h1>
-        <ol>
-            <li>Introduction and Preliminaries
-                <ol>
-                    <li>Motivation</li>
-                    <li>Background</li>
-                </ol> 
-            <li>Architecture and Protocols
-                <ol>
-                    <li>Architectural Overview</li>
-                    <li>Semantic Pingback</li>
-                    <li>Access Delegation for the WebID Protocol</li>
-                </ol> 
-            <li>Applications
-                <ol>
-                    <li>xOperator &ndash; an instant messaging agent</li>
-                    <li>MSSW &ndash; a mobile client</li>
-                    <li>OntoWiki &ndash; a a social network integrated data wiki</li>
-                </ol> 
-            <li>Evaluation, Conclusion and Future Work</li>
-        </ol>
-    </div-->
-
     <div class="step slide front" data-x="1300" data-y="0" data-z="0">
         <h1>Background</h1>
             <img src="img/Motivation-Growth.png" alt="The growth of social networks registered user accounts in the last ten years (image recreated according to the data in Jones [2013])" />
@@ -87,18 +63,18 @@
                     <li>more or less private content</li>
                 </ul>
             </li>
-            <li>Multimedia Sharing
-                <ul>
-                    <li>Vimeo, Picasa, &hellip;</li>
-                    <li>users more or less want to share content</li>
-                    <li>public and private content</li>
-                </ul>
-            </li>
             <li>Professional Networks
                 <ul>
                     <li>LinkedIn, Xing, &hellip;</li>
                     <li>used for recruiting and finding business partners</li>
                     <li>business related personal content (such as CV data)</li>
+                </ul>
+            </li>
+            <li>Multimedia Sharing
+                <ul>
+                    <li>Vimeo, Picasa, &hellip;</li>
+                    <li>users more or less want to share content</li>
+                    <li>public and private content</li>
                 </ul>
             </li>
         </ul>
@@ -274,50 +250,331 @@
         </figure>
     </div>
 
-    <div class="step slide" data-x="2600" data-y="0" data-z="-11000">
+    <div class="step slide" data-x="2600" data-y="0" data-z="-12000">
+        <h1>Distributed Social Networks</h1>
+        <figure>
+            <a href="images/baran_nets_large.gif"><img alt="Baran Networks" class="center nearlyall" src="images/baran_nets_large.gif"></a>
+            <figcaption>In:
+            <a href="http://www.rand.org/publications/RM/RM3420/">On Distributed Communications (I)</a> (by Paul Baran - August 1964) via. <a href="http://dannyayers.com/2011/07/15/The-Symbiotic-Web">Danny Ayers</a>, via. <a href="http://personalpages.manchester.ac.uk/staff/m.dodge/cybergeography//atlas/historical.html">Historical Maps of Computer Networks</a>
+            </figcaption>
+        </figure>
+    </div>
+
+    <div class="step slide" data-x="2600" data-y="0" data-z="-13000">
+        <h1>Semantic Web and Linked Data</h1>
+        <ul>
+            <li>The web is decentralized by design.</li>
+            <li>The Semantic Web is an extension to the current Web.</li>
+            <li>The meaning of web data is expressed in the same data space via shared ontologies.</li>
+            <li>This stresses the data itself and retracts the importance of protocols.</li>
+        </ul>
+    </div>
+
+    <div class="step slide" data-x="2600" data-y="0" data-z="-14000">
+        <q>To what extent can Semantic Web technologies be deployed to support the structure,
+            the maintenance as well as the usage of Distributed Social Networks on the World Wide Web?
+        </q>
+
+    </div>
+
+    <div class="step slide" data-x="2600" data-y="0" data-z="-15000">
         <h1>Approach</h1>
         <p>Based on the given motivational points, the following contributions were made:</p>
         <ul>
             <li>An <strong>architecture</strong> of a Distributed Semantic Social Network</li>
-            <li>An implementation of the architectures protocols</li>
+            <li>An implementation of the architectures <strong>protocols</strong></li>
             <li>Implementation of different <strong>application prototypes</strong>, which verify and demonstrate this architecture</li>
         </ul>
     </div>
 
+    <div class="step overview" data-x="1300" data-y="1200" data-z="0" data-scale="3">
+    </div>
     <div class="step slide front" data-x="0" data-y="1200" data-z="0">
         <h1>Architectural Overview</h1>
+        <figure>
+            <a href="images/Architecture2.svg"><img alt="Architecture" class="width80" src="images/Architecture2.png"></a>
+            <figcaption>In: S.Tramp et al.: <a href="http://www.semantic-web-journal.net/content/architecture-distributed-semantic-social-network">An Architecture of a Distributed Semantic Social Network</a>, Semantic Web Journal, Special Issue "The Personal Social Semantic Web", 2012</figcaption>
+        </figure>
     </div>
 
+    <div class="step slide" data-x="0" data-y="1200" data-z="-1000">
+    <h2>Architecture: Basic Principles</h2>
+    <ul>
+        <li>Linked Data
+            <ul>
+                <li>main protocol for data publishing, retrieval and integration</li>
+                <li>dereferencable and interlinked resources</li>
+                <li>fosters extensibility and a distributive overall character</li>
+            </ul>
+        <li>Service Decoupling
+            <ul>
+                <li>unravel services / application from the users data</li>
+                <li>settles ownership to the user</li>
+                <li>fosters privacy and pushes distribution</li>
+            </ul>
+        <li>Protocol Minimalism
+            <ul>
+                <li>communicate RDF triples between DSSN nodes</li>
+                <li>do not enforce workflow or exact interpretation</li>
+                <li>ensures the extensibility of the data model</li>
+            </ul>
+        </li>
+    </ul>
+    </div>
+
+    <div class="step slide" data-x="0" data-y="1200" data-z="-2000">
+    <figure>
+        <a href="images/Architecture2.svg"><img alt="Architecture" class="width80" src="images/Architecture2.png"></a>
+    </figure>
+    <ul>
+        <li>Data Layer
+            <ul>
+                <li>Resources (WebIDs, Data / Media Artefacts)</li>
+                <li>Feeds (RDF enabled Activity Streams and History Feeds)</li>
+            </ul>
+    </ul>
+    </div>
+    <div class="step slide" data-x="0" data-y="1200" data-z="-2000">
+    <figure>
+        <a href="images/Architecture2.svg"><img alt="Architecture" class="width80" src="images/Architecture2.png"></a>
+    </figure>
+    <ul>
+        <li>Service Layer and Protocols
+            <ul>
+                <li>SPARQL query/update (SPARQL Endpoint / update or search service)</li>
+                <li>Semantic Pingback (ping Service)</li>
+                <li>PubSubHubbub (push Service)</li>
+                <li>Linked Data (main Data Layer protocol)</li>
+                <li>WebID authentication protocol</li>
+            </ul>
+    </ul>
+    </div>
+    <div class="step slide" data-x="0" data-y="1200" data-z="-2000">
+    <figure>
+        <a href="images/Architecture2.svg"><img alt="Architecture" class="width80" src="images/Architecture2.png"></a>
+    </figure>
+    <ul>
+        <li>Application Layer
+            <ul>
+                <li>specific applications use Linked Data resources</li>
+                <li>manipulation via service layer</li>
+            </ul>
+        </li>
+    </ul>
+    </div>
+
+    <div class="step overview" data-x="1300" data-y="1200" data-z="0" data-scale="3">
+    </div>
     <div class="step slide front" data-x="1300" data-y="1200" data-z="0">
         <h1>Semantic Pingback</h1>
+        <figure>
+            <a href="images/SemanticPingback.svg"><img alt="Semantic Pingback" class="width80" src="images/SemanticPingback.svg"></a>
+        </figure>
     </div>
 
+    <div class="step slide" data-x="1300" data-y="1200" data-z="-1000">
+        <h1>Semantic Pingback: Usage</h1>
+        <ul>
+            <li>Based on an extension of the well-known Pingback technology</li>
+            <li>Adds support for Linked Data resources including RDFa, and named links/relations.</li>
+            <li>Two-fold usage:
+                <ul>
+                    <li>Facilitate the first contact between two
+                        WebIDs and establish a new connection (Friending)</li>
+                    <li>Ping the owner of different social network artefacts while doing an activity with that artefact (tagging an image, sharing a website from the owner).</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="step overview" data-x="1300" data-y="1200" data-z="0" data-scale="3">
+    </div>
     <div class="step slide front" data-x="2600" data-y="1200" data-z="0">
         <h1>Access Delegation for the WebID Protocol</h1>
+        <figure>
+            <a href="images/AuthSequence.svg"><img alt="WebID Delegation" class="width80" src="images/AuthSequence.svg"></a>
+        </figure>
     </div>
 
+    <div class="step slide" data-x="2600" data-y="1200" data-z="-1000">
+        <h1>WebID Delegation: Motivation</h1>
+        <p>Motivation:</p>
+        <ul>
+            <li>In DSSNs many machine agents act on behalf of a user.</li>
+            <li>The secretary acts in the name of another agent, the principal.</li>
+            <li>The principal is the agent who has a secretary that acts on its behalf.</li>
+        </ul>
+        <p>Requirements:</p>
+        <ul>
+            <li>Distinguish secretary from principal</li>
+            <li>Easy to use</li>
+            <li>Minimal protocol footprint</li>
+            <li>Efficiency</li>
+        </ul>
+    </div>
+
+    <div class="step slide" data-x="2600" data-y="1200" data-z="-2000">
+        <h1>WebID: Auth Sequence</h1>
+        <figure>
+            <a href="img/WebID-Sequence.png"><img alt="WebID Sequence" class="width70" src="img/WebID-Sequence.png"></a>
+            <figcaption>In: <a href="http://www.w3.org/2005/Incubator/webid/spec/tls/">WebID Authentication over TLS</a> (Henry Story et al.)</figcaption>
+        </figure>
+    </div>
+
+    <div class="step slide" data-x="2600" data-y="1200" data-z="-3000">
+        <h1>WebID Delegation: Auth Sequence</h1>
+        <figure>
+            <a href="images/AuthSequence.svg"><img alt="WebID Delegation" class="width80" src="images/AuthSequence.svg"></a>
+            <figcaption>In: <a href="http://ceur-ws.org/Vol-905/TrampEtAl_COLD2012.pdf">Extending the WebID Protocol with Access Delegation</a> (Sebastian Tramp, Henry Story, Andrei Sambra, Philipp Frischmuth, Michael Martin, and Sören Auer)</figcaption>
+        </figure>
+    </div>
+
+    <div class="step overview" data-x="1300" data-y="2400" data-z="0" data-scale="3">
+    </div>
     <div class="step slide front" data-x="0" data-y="2400" data-z="0">
         <h1>xOperator</h1>
+        <figure>
+            <a href="images/xOperator-UsageScenarios.svg"><img alt="xOperator Usage Scenarios" class="width80" src="images/xOperator-UsageScenarios.png"></a>
+            <figcaption>Usage Scenarios: (A) personal agent, (B) group agent, (C) agent network</figcaption>
+        </figure>
     </div>
 
+    <div class="step slide" data-x="0" data-y="2400" data-z="-1000">
+    <h1>xOperator &ndash; XMPP Communication</h1>
+    <figure>
+        <a href="img/xOperator-JabberCommunication.png"><img alt="xOperator XMPP Communication" class="width80" src="img/xOperator-JabberCommunication.png"></a>
+        <figcaption>Interconnecting the Semantic Web and Instant Messaging Networks</figcaption>
+    </figure>
+    </div>
+
+    <div class="step slide" data-x="0" data-y="2400" data-z="-2000">
+    <h1>xOperator &ndash; Screenshot</h1>
+    <figure>
+        <a href="images/xOperator-Screenshot.svg"><img alt="xOperator Screenshot" class="center nearlyall" src="images/xOperator-Screenshot.png"></a>
+        <figcaption>Interconnecting the DSSN with Instant Messaging Networks</figcaption>
+    </figure>
+    </div>
+
+    <div class="step overview" data-x="1300" data-y="2400" data-z="0" data-scale="3">
+    </div>
     <div class="step slide front" data-x="1300" data-y="2400" data-z="0">
-        <h1>MSSW</h1>
+        <h1>MSSW &ndash; Mobile Social Semantic Web</h1>
+        <figure>
+            <a href="images/MSSW-Screenshots.png"><img alt="MSSW Screenshots" class="width70" src="images/MSSW-Screenshots.png"></a>
+            <figcaption>Weaving a Distributed, Semantic Social Network for Mobile Users (different Android Screenshots)</figcaption>
+        </figure>
     </div>
 
+    <div class="step overview" data-x="1300" data-y="2400" data-z="0" data-scale="3">
+    </div>
     <div class="step slide front" data-x="2600" data-y="2400" data-z="0">
         <h1>OntoWiki</h1>
+        <figure>
+            <a href="images/ActivityStream.png"><img alt="Activity Stream" class="width80" src="images/ActivityStream.png"></a>
+            <figcaption>The Activity Stream integrates the latest activities synced with PubSubHubbub from your Social Network</figcaption>
+        </figure>
     </div>
 
+    <div class="step overview" data-x="1300" data-y="3600" data-z="0" data-scale="3">
+    </div>
     <div class="step slide front" data-x="0" data-y="3600" data-z="0">
-        <h1>Evaluation</h1>
+        <h1>Evaluation &ndash; Activity Simulation</h1>
+        <figure>
+            <a href="img/Evaluation-Framework.png"><img alt="Evaluation Framework" class="width50" src="img/Evaluation-Framework.png"></a>
+            <a href="images/TripleCreation.png"><img alt="Triple Creation" class="width30" src="images/TripleCreation.png"></a>
+            <figcaption>Scatter plot with logarithmic axes of related accounts vs. the number of created outgoing triples after one week of Social Network activity</figcaption>
+        </figure>
     </div>
 
+    <div class="step slide" data-x="0" data-y="3600" data-z="-1000">
+        <h1>Evaluation &ndash; Query Evaluation</h1>
+        <figure>
+            <a href="img/Evaluation-QueryTable.png"><img alt="Evaluation QueryTable" class="width50" src="img/Evaluation-QueryTable.png"></a>
+            <a href="img/Evaluation-Query1.png"><img alt="Query 1" class="width70" src="img/Evaluation-Query1.png"></a>
+            <figcaption>Ordered list of the last ten status posts (Q1)</figcaption>
+        </figure>
+    </div>
+
+    <div class="step slide" data-x="0" data-y="3600" data-z="-2000">
+        <h1>Evaluation &ndash; Query Evaluation</h1>
+        <figure>
+            <a href="img/Evaluation-QueryTable.png"><img alt="Evaluation QueryTable" class="width50" src="img/Evaluation-QueryTable.png"></a>
+            <a href="img/Evaluation-Query3.png"><img alt="Query 3" class="width70" src="img/Evaluation-Query3.png"></a>
+            <figcaption>List the next five upcoming birthdays (Q3)</figcaption>
+        </figure>
+    </div>
+
+    <div class="step slide" data-x="0" data-y="3600" data-z="-3000">
+        <h1>Evaluation &ndash; Application Profiles</h1>
+        <figure>
+            <a href="img/Evaluation-Applications.png"><img alt="Evaluation Applications" class="width50" src="img/Evaluation-Applications.png"></a>
+            <figcaption>Comparison of all three applications according to their used architecture assets</figcaption>
+        </figure>
+    </div>
+
+    <div class="step overview" data-x="1300" data-y="3600" data-z="0" data-scale="3">
+    </div>
     <div class="step slide front" data-x="1300" data-y="3600" data-z="0">
-        <h1>Publications</h1>
+        <h1>Contributions</h1>
+        <ul>
+            <li>Overall Architecture</li>
+            <li>Data Layer: DSSN schema, History feeds</li>
+            <li>Protocol Layer: Semantic Pingback, WebID Access Delegation</li>
+            <li>Service Layer: Ping Service</li>
+            <li>Application Layer: xOperator, Mobile Social Semantic Web Client, OntoWiki DSSN</li>
+        </ul>
     </div>
 
+    <div class="step slide" data-x="1300" data-y="3600" data-z="-1000">
+        <h1>Publications</h1>
+        <ul>
+            <li>Number of publications:
+                <ul>
+                    <li><a href="http://www.dblp.org/search/#query=author:sebastian_tramp:">DBLP: 25</a></li>
+                    <li><a href="https://www.researchgate.net/profile/Sebastian_Tramp">Research Gate: 58</a></li>
+                </ul>
+            </li>
+            <li>Other Numbers:
+                <ul>
+                    <li>Citations: 1067 (Google Scholar), 529 (Research Gate)</li>
+                    <li>h-index: 14 (Google Scholar)</li>
+                    <li>i10-index: 20 (Google Scholar)</li>
+                    <li>Impact Points: 1,80 (Research Gate)</li>
+                    <li>Conferences: WWW (1), ISWC (5), ESWC (6), EKAW (2), I-Semantics (3)</li>
+                </ul>
+            </li>
+            <li>Directly PhD topic related publications:
+                <ul>
+                    <li>21 (english, peer reviewed)</li>
+                </ul>
+                </li>
+        </ul>
+    </div>
+
+    <div class="step overview" data-x="1300" data-y="3600" data-z="0" data-scale="3">
+    </div>
     <div class="step slide front" data-x="2600" data-y="3600" data-z="0">
-        <h1>Thank You</h1>
+        <h1>Future Work</h1>
+        <figure>
+            <a href="img/FutureWork-xodx.png"><img alt="FutureWork XODX" class="width80" src="img/FutureWork-xodx.png"></a>
+        </figure>
+    </div>
+
+    <div class="step slide" data-x="2600" data-y="3600" data-z="-1000">
+        <h1>LUCID: Linked valUe ChaIn Data</h1>
+        <figure>
+            <a href="img/FutureWork-LUCID.png"><img alt="FutureWork LUCID" class="width80" src="img/FutureWork-LUCID.png"></a>
+        </figure>
+    </div>
+
+    <div class="step slide" data-x="2600" data-y="3600" data-z="-1000">
+        <h1>Thanks for your attention</h1>
+        <q>Sebastian Tramp</q>
+        <a href="http://sebastian.tramp.name">http://sebastian.tramp.name</a> (WebID)<br />
+        <a href="mailto:mail@sebastian.tramp.name">mail@sebastian.tramp.name</a>
+        <figure>
+            <a href="img/logo-eccenca-darktext.png"><img class="right" alt="eccenca logo" src="img/logo-eccenca-darktext.png"></a>
+        </figure>
     </div>
 
     <div class="step overview" data-x="1300" data-y="1800" data-z="0" data-scale="7">

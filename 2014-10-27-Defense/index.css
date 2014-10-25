@@ -238,6 +238,11 @@ ul, ol  {
     margin-top: 5px;
 }
 
+.slide p {
+    font-size: 40px;
+    line-height: 52px;
+}
+
 li {
     margin-left: 40px;
     font-size: 40px;
@@ -298,9 +303,19 @@ ul ul li, ol ol li {
     font-size: 25px;
 }
 
+.width30 {
+    width: 30%;
+}
 .width50 {
     width: 50%;
 }
+.width70 {
+    width: 70%;
+}
 .width80 {
     width: 80%;
+}
+
+.right {
+    text-align: right;
 }
