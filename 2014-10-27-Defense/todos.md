@@ -1,4 +1,3 @@
-- übersicht level 3 zu knapp
 - Motivation und Background zu lang (9 + 7 min)
 - Motivation: Übersicht weg
 - Haenlein 2010 mit verankern
