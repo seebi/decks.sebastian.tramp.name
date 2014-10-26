@@ -249,6 +249,17 @@ ul, ol  {
     line-height: 52px;
 }
 
+#title p {
+    font-size: 35px;
+    line-height: 48px;
+    margin-top: 40px;
+}
+#title li {
+    font-size: 35px;
+    line-height: 48px;
+    list-style-type: none;
+}
+
 li {
     margin-left: 40px;
     font-size: 40px;
