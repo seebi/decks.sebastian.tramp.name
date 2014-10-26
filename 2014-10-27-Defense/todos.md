@@ -23,31 +23,21 @@
 - Problem krasser darstellen
 - Warum wird die WebID hervorgehoben / ist die WebID wichtig
 - Architektur: wesentliche Bestandteile sind
-
-# slides todos
-
-- Haenlein 2010 mit verankern
-- Einzelne Layer: Grafik 
-- 1280x1024
-- Details (webid auth + Semantic Pingback) in grafik annotieren
-- Pingback usage vielleicht weglassen?
-
-- Applikation Profiles nach vorne
-
-- Zwei weitere Projekte ...
-- xodx und Lucid nur ganz kurz
-
-- Approach: + Evaluation
-
-- Architektur: Zahlen raus, überlastet das Auge
-
-- Quantitative Evaluation: Simulation Architektur als erstes und groß
-- Evaluationsgraph: Kommunikations-Overhead -> Welche Anforderungen haben wir
-  an einen DSSN Client
-- Nur eine Query
-- Query Evaluation: weg, stattdessen am Scatter Plot erklären
+- Scatter Plot erklären
     - Mobile Clients ungeeignet
     - Grad der Verteilung des DSSN also nicht diese Hardware
     - Wohl aber miniserver wie z.b. eine FeedomBox auf einer Raspberry
+- Evaluationsgraph: Kommunikations-Overhead -> Welche Anforderungen haben wir
+  an einen DSSN Client
+
+# slides todos
+
+- Einzelne Layer: Grafik 
+- 1280x1024
+- Details (webid auth + Semantic Pingback) in grafik annotieren
+
+- Architektur: Zahlen raus, überlastet das Auge
 
 - figure 1: zitat in caption
+- Contributions grafik verbessern
+

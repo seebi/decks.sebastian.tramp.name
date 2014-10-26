@@ -221,6 +221,11 @@ h1 {
     margin-bottom: 10px;
 }
 
+.note {
+    font-size: 50%;
+    font-weight: normal;
+}
+
 h2 {
     display: block;
     font-size: 40px;
