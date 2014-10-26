@@ -38,6 +38,5 @@
 
 - Architektur: Zahlen raus, überlastet das Auge
 
-- figure 1: zitat in caption
 - Contributions grafik verbessern
 
