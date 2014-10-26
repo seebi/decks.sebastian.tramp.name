@@ -15,12 +15,9 @@
    id="svg2385"
    sodipodi:version="0.32"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="Architecture2.svg"
+   sodipodi:docname="Contributions.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   version="1.0"
-   inkscape:export-filename="/media/sf_seebi/Projects/seebi/decks.sebastian.tramp.name.git/2014-10-27-Defense/img/Architecture2.png"
-   inkscape:export-xdpi="149.87556"
-   inkscape:export-ydpi="149.87556">
+   version="1.0">
   <defs
      id="defs3">
     <marker
@@ -382,7 +379,7 @@
           <dc:format>image/svg+xml</dc:format>
           <dc:type
              rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-          <dc:title></dc:title>
+          <dc:title />
         </cc:Work>
       </rdf:RDF>
     </metadata>
@@ -1453,7 +1450,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2"
-     inkscape:cx="297.80281"
+     inkscape:cx="289.05281"
      inkscape:cy="115.45684"
      inkscape:current-layer="layer1"
      inkscape:window-width="1415"
@@ -1579,95 +1576,54 @@
            y="19.197676"
            x="141.86897"
            sodipodi:role="line"
-           id="tspan4974">Profile</tspan><tspan
+           id="tspan5107">OntoWiki</tspan><tspan
            y="31.697676"
            x="141.86897"
            sodipodi:role="line"
-           id="tspan5107">Manager</tspan></text>
+           id="tspan13624">DSSN</tspan></text>
     </g>
-    <g
-       id="g4573"
-       transform="translate(53.837242,-6.5571605)">
-      <rect
-         style="fill:#ffffff;fill-opacity:0.39215686;stroke:none"
-         id="rect5172-6-4-3"
-         width="67"
-         height="26.144535"
-         x="137.53462"
-         y="9.5036945"
-         rx="4.3963256" />
-      <text
-         inkscape:export-ydpi="200"
-         inkscape:export-xdpi="200"
-         inkscape:export-filename="/home/seebi/projects/papers/2008/ESWC_xOperator/UsageScenarios.png"
-         id="text6211-4-49-3-1"
-         y="18.790962"
-         x="170.94173"
-         style="font-size:10px;font-style:normal;font-weight:bold;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMRoman10"
-         xml:space="preserve"><tspan
-           id="tspan4940-0-7-4"
-           y="18.790962"
-           x="170.94173"
-           sodipodi:role="line">Bookmark</tspan><tspan
-           id="tspan4522"
-           y="31.290962"
-           x="170.94173"
-           sodipodi:role="line">Collection</tspan></text>
-    </g>
-    <g
-       id="g4579-8"
-       transform="translate(130.58425,1.337431)">
-      <rect
-         style="fill:#ffffff;fill-opacity:0.39215686;stroke:none"
-         id="rect5172-6-4-3-9-9"
-         width="67"
-         height="26.144535"
-         x="226.53462"
-         y="1.6091068"
-         rx="4.3963256" />
-      <text
-         inkscape:export-ydpi="200"
-         inkscape:export-xdpi="200"
-         inkscape:export-filename="/home/seebi/projects/papers/2008/ESWC_xOperator/UsageScenarios.png"
-         id="text6211-4-49-3-1-2-2"
-         y="17.146374"
-         x="259.92072"
-         style="font-size:10px;font-style:normal;font-weight:bold;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMRoman10"
-         xml:space="preserve"><tspan
-           id="tspan4522-6-6"
-           y="17.146374"
-           x="259.92072"
-           sodipodi:role="line">Blog</tspan></text>
-    </g>
-    <g
-       id="g4573-6"
-       transform="translate(136.71075,-6.5571567)">
-      <rect
-         style="fill:#ffffff;fill-opacity:0.39215686;stroke:none"
-         id="rect5172-6-4-3-4"
-         width="67"
-         height="26.144535"
-         x="137.53462"
-         y="9.5036945"
-         rx="4.3963256" />
-      <text
-         inkscape:export-ydpi="200"
-         inkscape:export-xdpi="200"
-         inkscape:export-filename="/home/seebi/projects/papers/2008/ESWC_xOperator/UsageScenarios.png"
-         id="text6211-4-49-3-1-9"
-         y="18.790962"
-         x="170.94173"
-         style="font-size:10px;font-style:normal;font-weight:bold;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMRoman10"
-         xml:space="preserve"><tspan
-           id="tspan4522-0"
-           y="18.790962"
-           x="170.94173"
-           sodipodi:role="line">Photo</tspan><tspan
-           y="31.290962"
-           x="170.94173"
-           sodipodi:role="line"
-           id="tspan5054">Sharing</tspan></text>
-    </g>
+    <rect
+       rx="4.3963256"
+       y="2.9465339"
+       x="191.37186"
+       height="26.144535"
+       width="67"
+       id="rect5172-6-4-3"
+       style="fill:#ffffff;fill-opacity:0.39215686;stroke:none" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-weight:bold;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMRoman10"
+       x="224.77896"
+       y="18.233803"
+       id="text6211-4-49-3-1"
+       inkscape:export-filename="/home/seebi/projects/papers/2008/ESWC_xOperator/UsageScenarios.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         sodipodi:role="line"
+         x="224.77896"
+         y="18.233803"
+         id="tspan4522">xOperator</tspan></text>
+    <rect
+       rx="4.3963256"
+       y="2.9465377"
+       x="274.24536"
+       height="26.144535"
+       width="67"
+       id="rect5172-6-4-3-4"
+       style="fill:#ffffff;fill-opacity:0.39215686;stroke:none" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-weight:bold;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMRoman10"
+       x="307.65247"
+       y="18.233805"
+       id="text6211-4-49-3-1-9"
+       inkscape:export-filename="/home/seebi/projects/papers/2008/ESWC_xOperator/UsageScenarios.png"
+       inkscape:export-xdpi="200"
+       inkscape:export-ydpi="200"><tspan
+         id="tspan5054"
+         sodipodi:role="line"
+         x="307.65247"
+         y="18.233805">MSSW</tspan></text>
     <g
        id="g4482"
        transform="translate(67.882251,-20.249547)">
@@ -2305,31 +2261,6 @@
          sodipodi:role="line"
          id="tspan5372-6"
          style="text-align:end;text-anchor:end">ping</tspan></text>
-    <g
-       id="g6228"
-       transform="translate(16.617009,0)">
-      <rect
-         style="fill:#ffffff;fill-opacity:0.39215686;stroke:none"
-         id="rect5172-6-4-3-9-9-4"
-         width="67"
-         height="14.12372"
-         x="425.36978"
-         y="2.9465377"
-         rx="4.3963256" />
-      <text
-         inkscape:export-ydpi="200"
-         inkscape:export-xdpi="200"
-         inkscape:export-filename="/home/seebi/projects/papers/2008/ESWC_xOperator/UsageScenarios.png"
-         id="text6211-4-49-3-1-2-2-8"
-         y="10.788398"
-         x="458.75586"
-         style="font-size:10px;font-style:normal;font-weight:bold;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:LMRoman10"
-         xml:space="preserve"><tspan
-           id="tspan4522-6-6-1"
-           y="10.788398"
-           x="458.75586"
-           sodipodi:role="line">...</tspan></text>
-    </g>
     <text
        inkscape:export-ydpi="200"
        inkscape:export-xdpi="200"
@@ -2535,5 +2466,105 @@
          inkscape:connector-curvature="0"
          style="fill:#ffffff" />
     </g>
+    <path
+       transform="translate(146.78463,33.544154)"
+       sodipodi:type="arc"
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path13636-1"
+       sodipodi:cx="25.75"
+       sodipodi:cy="-29.935043"
+       sodipodi:rx="4.25"
+       sodipodi:ry="4.25"
+       d="m 30,-29.935043 a 4.25,4.25 0 1 1 -8.5,0 4.25,4.25 0 1 1 8.5,0 z" />
+    <path
+       transform="translate(230.78463,33.544154)"
+       sodipodi:type="arc"
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path13636-5"
+       sodipodi:cx="25.75"
+       sodipodi:cy="-29.935043"
+       sodipodi:rx="4.25"
+       sodipodi:ry="4.25"
+       d="m 30,-29.935043 a 4.25,4.25 0 1 1 -8.5,0 4.25,4.25 0 1 1 8.5,0 z" />
+    <path
+       transform="translate(312.78463,33.544154)"
+       sodipodi:type="arc"
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path13636-4"
+       sodipodi:cx="25.75"
+       sodipodi:cy="-29.935043"
+       sodipodi:rx="4.25"
+       sodipodi:ry="4.25"
+       d="m 30,-29.935043 a 4.25,4.25 0 1 1 -8.5,0 4.25,4.25 0 1 1 8.5,0 z" />
+    <path
+       transform="translate(125.28463,84.544154)"
+       sodipodi:type="arc"
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path13636-9"
+       sodipodi:cx="25.75"
+       sodipodi:cy="-29.935043"
+       sodipodi:rx="4.25"
+       sodipodi:ry="4.25"
+       d="m 30,-29.935043 a 4.25,4.25 0 1 1 -8.5,0 4.25,4.25 0 1 1 8.5,0 z" />
+    <path
+       transform="translate(27.784626,132.54415)"
+       sodipodi:type="arc"
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path13636-6"
+       sodipodi:cx="25.75"
+       sodipodi:cy="-29.935043"
+       sodipodi:rx="4.25"
+       sodipodi:ry="4.25"
+       d="m 30,-29.935043 a 4.25,4.25 0 1 1 -8.5,0 4.25,4.25 0 1 1 8.5,0 z" />
+    <path
+       transform="translate(125.28463,161.04415)"
+       sodipodi:type="arc"
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path13636-0"
+       sodipodi:cx="25.75"
+       sodipodi:cy="-29.935043"
+       sodipodi:rx="4.25"
+       sodipodi:ry="4.25"
+       d="m 30,-29.935043 a 4.25,4.25 0 1 1 -8.5,0 4.25,4.25 0 1 1 8.5,0 z" />
+    <path
+       transform="translate(146.78463,132.54415)"
+       sodipodi:type="arc"
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path13636-03"
+       sodipodi:cx="25.75"
+       sodipodi:cy="-29.935043"
+       sodipodi:rx="4.25"
+       sodipodi:ry="4.25"
+       d="m 30,-29.935043 a 4.25,4.25 0 1 1 -8.5,0 4.25,4.25 0 1 1 8.5,0 z" />
+    <path
+       transform="translate(356.28463,161.04415)"
+       sodipodi:type="arc"
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path13636-91"
+       sodipodi:cx="25.75"
+       sodipodi:cy="-29.935043"
+       sodipodi:rx="4.25"
+       sodipodi:ry="4.25"
+       d="m 30,-29.935043 a 4.25,4.25 0 1 1 -8.5,0 4.25,4.25 0 1 1 8.5,0 z" />
+    <path
+       transform="translate(356.28463,210.54415)"
+       sodipodi:type="arc"
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path13636-48"
+       sodipodi:cx="25.75"
+       sodipodi:cy="-29.935043"
+       sodipodi:rx="4.25"
+       sodipodi:ry="4.25"
+       d="m 30,-29.935043 a 4.25,4.25 0 1 1 -8.5,0 4.25,4.25 0 1 1 8.5,0 z" />
+    <path
+       transform="translate(92.784626,210.54415)"
+       sodipodi:type="arc"
+       style="fill:#ff0000;fill-opacity:1;stroke:#000000;stroke-width:0.70866144;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path13636-8"
+       sodipodi:cx="25.75"
+       sodipodi:cy="-29.935043"
+       sodipodi:rx="4.25"
+       sodipodi:ry="4.25"
+       d="m 30,-29.935043 a 4.25,4.25 0 1 1 -8.5,0 4.25,4.25 0 1 1 8.5,0 z" />
   </g>
 </svg>

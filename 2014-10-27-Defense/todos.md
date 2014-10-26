@@ -36,7 +36,3 @@
 - 1280x1024
 - Details (webid auth + Semantic Pingback) in grafik annotieren
 
-- Architektur: Zahlen raus, überlastet das Auge
-
-- Contributions grafik verbessern
-
