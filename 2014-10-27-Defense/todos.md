@@ -32,7 +32,5 @@
 
 # slides todos
 
-- Einzelne Layer: Grafik 
-- 1280x1024
-- Details (webid auth + Semantic Pingback) in grafik annotieren
+- check in 1280x1024
 
