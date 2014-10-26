@@ -215,6 +215,7 @@ a {
 h1 {
     display: block;
     font-size: 50px;
+    font-weight: bold;
     line-height: 72px;
     margin-top: 30px;
     margin-bottom: 10px;
@@ -252,8 +253,8 @@ li {
 
 ul ul li, ol ol li {
     margin-left: 25px;
-    font-size: 30px;
-    line-height: 42px;
+    font-size: 35px;
+    line-height: 47px;
     list-style-type: circle;
 }
 
@@ -309,11 +310,29 @@ ul ul li, ol ol li {
 .width50 {
     width: 50%;
 }
+.width60 {
+    width: 60%;
+}
+.width65 {
+    width: 65%;
+}
 .width70 {
     width: 70%;
 }
+.width75 {
+    width: 75%;
+}
 .width80 {
     width: 80%;
+}
+.width85 {
+    width: 85%;
+}
+.width90 {
+    width: 90%;
+}
+.width100 {
+    width: 100%;
 }
 
 .right {
