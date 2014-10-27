@@ -30,6 +30,44 @@
 - Evaluationsgraph: Kommunikations-Overhead -> Welche Anforderungen haben wir
   an einen DSSN Client
 
+# jörgs nots
+
+- Körpersprache verbessern: Hände nicht in Hosentasche, kein Bart, nicht Arme
+  verschränken
+
+- Slide 1 Background: SNs sind eine der Hauptkommunikationsformen des Netzes
+- Walled Garden: Warum ist das ein Problem?
+- Privacy: zu viel Text / ev. weg?
+- Betonen: technische und soziale Implikationen
+- Freedom Communication: Legende fehlt
+- Graph slide: verteilt ist robust betonen
+- Übergang: Verteilt zu Web und Semantic Web
+- Übergänge zwischen den Slides
+- DSN: einzelgraphiken für jeden Schritt
+
+- Main Research Question: Mehr Zeit!!!
+- MRQ: Blockbasiert mit mehr Rand
+- MRQ: Still durchlesen, dann weiter :-)
+- stresses -> emphasizes (Focus data / information over protocol) (umformulieren)
+
+- basic Principles nur die hauptpunkte
+  - data decoupling statt Service decoupling
+  - decouple service / application from user data
+
+- Auffälligen Mauspointer auswählen ...
+- Applikation Layer: "wie youtube" nicht sagen
+- Architektur: Foto Sharing Dienst exemplarisch erklären
+
+- WebID: Rote Kästen über main steps packen
+- Semantic Pingback: Rote Kästen über main steps packen
+
+- xOperator: FOAF Space -> WebID Profile
+- xOperator XMPP Communication ev. weg
+
+- Eval Tabelle: xOperator nutzt search und update service
+- Eval Quantitative: Einleitung, In welchen Kontexten und auf welchen Maschinen
+- Eval: Unique Triples
+
 # slides todos
 
 - check in 1280x1024
