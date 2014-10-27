@@ -47,8 +47,6 @@
 
 # jörgs notes
 
-- Architektur: Foto Sharing Dienst exemplarisch erklären
-
 - Semantic Pingback: Rote Kästen über main steps packen
 
 # slides todos
