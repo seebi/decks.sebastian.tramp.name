@@ -45,10 +45,6 @@
 - Eval: Unique Triples
 - Eval Quantitative: Einleitung, In welchen Kontexten und auf welchen Maschinen
 
-# jörgs notes
-
-- Semantic Pingback: Rote Kästen über main steps packen
-
 # slides todos
 
 - check in 1280x1024
