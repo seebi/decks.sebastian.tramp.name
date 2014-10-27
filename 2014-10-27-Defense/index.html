@@ -42,7 +42,7 @@
         </ul>
     </div>
 
-    <div class="step overview" data-x="1300" data-y="0" data-z="0" data-scale="3.2">
+    <!--div class="step overview" data-x="1300" data-y="0" data-z="0" data-scale="3.2">
     </div>
     <div class="step overview" data-x="1300" data-y="1200" data-z="0" data-scale="3.2">
     </div>
@@ -51,7 +51,7 @@
     <div class="step overview" data-x="1300" data-y="3600" data-z="0" data-scale="3.2">
     </div>
     <div class="step overview" data-x="1300" data-y="1800" data-z="0" data-scale="5">
-    </div>
+    </div-->
 
     <div class="step slide front" data-x="1300" data-y="0" data-z="0">
         <h1>Background</h1>
@@ -231,11 +231,11 @@
     <div class="step slide" data-x="2600" data-y="0" data-z="-5000">
         <h1>Motivation &ndash; Privacy</h1>
         <figure>
-            <a href="img/Motivation-LikeButton.png"><img class="width50" alt="facebook like button" src="img/Motivation-LikeButton.png"></a>
+            <a href="img/Motivation-LikeButton.png"><img class="width80" alt="facebook like button" src="img/Motivation-LikeButton.png"></a>
             <figcaption>
-            In 2010, Facebook introduced a personal information aggregation feature called <strong>connections</strong>.
-            Clicking a <strong>Like</strong> button as well as visiting the page creates a connection between a facebook user and the website resource.
-            Facebook treats such relationships as public information.
+            <!-- In 2010, Facebook introduced a personal information aggregation feature called <strong>connections</strong>.-->
+            Clicking a <strong>Like</strong> button as well as <strong>just visiting the page</strong> creates a connection between a facebook user and the website resource.
+            Facebook treats such relationships as <strong>public information</strong>.
             </figcaption>
         </figure>
     </div>
@@ -253,7 +253,7 @@
     <div class="step slide" data-x="2600" data-y="0" data-z="-7000">
         <h1>Motivation &ndash; Freedom of Communication</h1>
         <figure class="ahalf right">
-            <a href="img/Internet_blackholes.svg"><img alt="Internet Blackholes" src="img/Internet_blackholes.svg"></a>
+            <a href="img/Internet_Censorship_World_Map.svg"><img alt="Internet Censorship Map" src="img/Internet_Censorship_World_Map.png"></a>
             <figcaption>
             <a href="http://en.rsf.org/">Reporters without Borders</a>
             maintain a <a href="http://en.rsf.org/IMG/pdf/Internet_enemies.pdf">"Enemies of the Internet"</a> list
@@ -267,6 +267,24 @@
     <div class="step slide front" data-x="0" data-y="1200" data-z="0">
         <h1>Distributed Social Networks</h1>
         <figure>
+            <a href="img/baran_nets_large.gif"><img alt="Baran Networks" class="width70" src="img/baran_nets_large-1.gif"></a>
+            <figcaption>In:
+            <a href="http://www.rand.org/publications/RM/RM3420/">On Distributed Communications (I)</a> (by Paul Baran - August 1964) via. <a href="http://dannyayers.com/2011/07/15/The-Symbiotic-Web">Danny Ayers</a>, via. <a href="http://personalpages.manchester.ac.uk/staff/m.dodge/cybergeography//atlas/historical.html">Historical Maps of Computer Networks</a>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="step slide" data-x="0" data-y="1200" data-z="0">
+        <h1>Distributed Social Networks</h1>
+        <figure>
+            <a href="img/baran_nets_large.gif"><img alt="Baran Networks" class="width70" src="img/baran_nets_large-2.gif"></a>
+            <figcaption>In:
+            <a href="http://www.rand.org/publications/RM/RM3420/">On Distributed Communications (I)</a> (by Paul Baran - August 1964) via. <a href="http://dannyayers.com/2011/07/15/The-Symbiotic-Web">Danny Ayers</a>, via. <a href="http://personalpages.manchester.ac.uk/staff/m.dodge/cybergeography//atlas/historical.html">Historical Maps of Computer Networks</a>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="step slide" data-x="0" data-y="1200" data-z="0">
+        <h1>Distributed Social Networks</h1>
+        <figure>
             <a href="img/baran_nets_large.gif"><img alt="Baran Networks" class="width70" src="img/baran_nets_large.gif"></a>
             <figcaption>In:
             <a href="http://www.rand.org/publications/RM/RM3420/">On Distributed Communications (I)</a> (by Paul Baran - August 1964) via. <a href="http://dannyayers.com/2011/07/15/The-Symbiotic-Web">Danny Ayers</a>, via. <a href="http://personalpages.manchester.ac.uk/staff/m.dodge/cybergeography//atlas/historical.html">Historical Maps of Computer Networks</a>
@@ -276,17 +294,17 @@
 
     <div class="step slide" data-x="0" data-y="1200" data-z="-1000">
         <h1>Semantic Web and Linked Data</h1>
-        <ul>
+        <ul style="margin-top: 100px;">
             <li>The web is distributed by design.</li>
             <li>The Semantic Web is an extension to the current Web.</li>
             <li>The meaning of web data is expressed in the same data space via shared ontologies.</li>
-            <li>This stresses the data itself and retracts the importance of protocols.</li>
+            <li>Focus information over protocols</li>
         </ul>
     </div>
 
     <div class="step slide" data-x="0" data-y="1200" data-z="-2000">
         <h1>Main Research Question</h1>
-        <q>To what extent can Semantic Web technologies be deployed to support the structure,
+        <q class="mrq">To what extent can Semantic Web technologies be deployed to support the structure,
             the maintenance as well as the usage of Distributed Social Networks on the World Wide Web?
         </q>
 
@@ -308,28 +326,59 @@
     </div>
 
     <div class="step slide" data-x="0" data-y="1200" data-z="-4000">
-    <h1>Architecture: Basic Principles</h1>
-    <ul>
-        <li>Linked Data / WebID Authentication
-            <ul>
-                <li>main protocol for data publishing, retrieval and integration</li>
-                <li>dereferencable and interlinked resources</li>
-                <li>fosters extensibility and a distributive overall character</li>
-            </ul>
-        <li>Service Decoupling
-            <ul>
-                <li>unravel services / application from the users data</li>
-                <li>settles ownership to the user</li>
-                <li>fosters privacy and pushes distribution</li>
-            </ul>
-        <li>Protocol Minimalism
-            <ul>
-                <li>communicate RDF triples between DSSN nodes</li>
-                <li>do not enforce workflow or exact interpretation</li>
-                <li>ensures the extensibility of the data model</li>
-            </ul>
-        </li>
-    </ul>
+        <h1>Architecture: Basic Principles</h1>
+        <ul>
+            <li>Linked Data / WebID Authentication
+                <ul>
+                    <li>main protocol for data publishing, retrieval and integration</li>
+                    <li>dereferencable and interlinked resources</li>
+                    <li>fosters extensibility and a distributive overall character</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="step slide" data-x="0" data-y="1200" data-z="-4000">
+        <h1>Architecture: Basic Principles</h1>
+        <ul>
+            <li>Linked Data / WebID Authentication
+                <ul>
+                    <li>main protocol for data publishing, retrieval and integration</li>
+                    <li>dereferencable and interlinked resources</li>
+                    <li>fosters extensibility and a distributive overall character</li>
+                </ul>
+            </li>
+            <li>Decouple services and applications from the users data
+                <ul>
+                    <li>settles ownership to the user</li>
+                    <li>fosters privacy and pushes distribution</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="step slide" data-x="0" data-y="1200" data-z="-4000">
+        <h1>Architecture: Basic Principles</h1>
+        <ul>
+            <li>Linked Data / WebID Authentication
+                <ul>
+                    <li>main protocol for data publishing, retrieval and integration</li>
+                    <li>dereferencable and interlinked resources</li>
+                    <li>fosters extensibility and a distributive overall character</li>
+                </ul>
+            </li>
+            <li>Decouple services and applications from the users data
+                <ul>
+                    <li>settles ownership to the user</li>
+                    <li>fosters privacy and pushes distribution</li>
+                </ul>
+            </li>
+            <li>Protocol Minimalism
+                <ul>
+                    <li>communicate RDF triples between DSSN nodes</li>
+                    <li>do not enforce workflow or exact interpretation</li>
+                    <li>ensures the extensibility of the data model</li>
+                </ul>
+            </li>
+        </ul>
     </div>
 
 
@@ -408,7 +457,28 @@
     <div class="step slide front" data-x="1300" data-y="1200" data-z="0">
         <h1>Access Delegation for the WebID Protocol</h1>
         <figure>
-            <a href="img/AuthSequence.svg"><img alt="WebID Delegation" class="width85" src="img/AuthSequence.svg"></a>
+            <a href="img/AuthSequence.svg"><img alt="WebID Delegation" class="width85" src="img/AuthSequence.png"></a>
+            <figcaption>In: S.Tramp et al.: <a href="http://ceur-ws.org/Vol-905/TrampEtAl_COLD2012.pdf">Extending the WebID Protocol with Access Delegation</a>, Proceedings of the Third International Workshop on Consuming Linked Data (COLD2012), Boston, MA, USA</figcaption>
+        </figure>
+    </div>
+    <div class="step slide" data-x="1300" data-y="1200" data-z="0">
+        <h1>Access Delegation for the WebID Protocol</h1>
+        <figure>
+            <a href="img/AuthSequence.svg"><img alt="WebID Delegation" class="width85" src="img/AuthSequence-1.png"></a>
+            <figcaption>In: S.Tramp et al.: <a href="http://ceur-ws.org/Vol-905/TrampEtAl_COLD2012.pdf">Extending the WebID Protocol with Access Delegation</a>, Proceedings of the Third International Workshop on Consuming Linked Data (COLD2012), Boston, MA, USA</figcaption>
+        </figure>
+    </div>
+    <div class="step slide" data-x="1300" data-y="1200" data-z="0">
+        <h1>Access Delegation for the WebID Protocol</h1>
+        <figure>
+            <a href="img/AuthSequence.svg"><img alt="WebID Delegation" class="width85" src="img/AuthSequence-2.png"></a>
+            <figcaption>In: S.Tramp et al.: <a href="http://ceur-ws.org/Vol-905/TrampEtAl_COLD2012.pdf">Extending the WebID Protocol with Access Delegation</a>, Proceedings of the Third International Workshop on Consuming Linked Data (COLD2012), Boston, MA, USA</figcaption>
+        </figure>
+    </div>
+    <div class="step slide" data-x="1300" data-y="1200" data-z="0">
+        <h1>Access Delegation for the WebID Protocol</h1>
+        <figure>
+            <a href="img/AuthSequence.svg"><img alt="WebID Delegation" class="width85" src="img/AuthSequence-3.png"></a>
             <figcaption>In: S.Tramp et al.: <a href="http://ceur-ws.org/Vol-905/TrampEtAl_COLD2012.pdf">Extending the WebID Protocol with Access Delegation</a>, Proceedings of the Third International Workshop on Consuming Linked Data (COLD2012), Boston, MA, USA</figcaption>
         </figure>
     </div>
@@ -480,20 +550,34 @@
             <figcaption>In: S.Tramp et al.: <a href="http://link.springer.com/chapter/10.1007%2F978-3-540-68234-9_5">xOperator &ndash; Interconnecting the Semantic Web and Instant Messaging Networks</a>, Proceedings of the 5th European Semantic Web Conference (ESWC2008), Tenerife, Spain</figcaption>
         </figure>
     </div>
+    <div class="step slide" data-x="0" data-y="2400" data-z="0">
+        <h1>xOperator</h1>
+        <figure>
+            <a href="img/xOperator-UsageScenarios.svg"><img alt="xOperator Usage Scenarios" class="width90" src="img/xOperator-UsageScenarios-1.png"></a>
+            <figcaption>In: S.Tramp et al.: <a href="http://link.springer.com/chapter/10.1007%2F978-3-540-68234-9_5">xOperator &ndash; Interconnecting the Semantic Web and Instant Messaging Networks</a>, Proceedings of the 5th European Semantic Web Conference (ESWC2008), Tenerife, Spain</figcaption>
+        </figure>
+    </div>
+    <div class="step slide" data-x="0" data-y="2400" data-z="0">
+        <h1>xOperator</h1>
+        <figure>
+            <a href="img/xOperator-UsageScenarios.svg"><img alt="xOperator Usage Scenarios" class="width90" src="img/xOperator-UsageScenarios-2.png"></a>
+            <figcaption>In: S.Tramp et al.: <a href="http://link.springer.com/chapter/10.1007%2F978-3-540-68234-9_5">xOperator &ndash; Interconnecting the Semantic Web and Instant Messaging Networks</a>, Proceedings of the 5th European Semantic Web Conference (ESWC2008), Tenerife, Spain</figcaption>
+        </figure>
+    </div>
 
-    <div class="step slide" data-x="0" data-y="2400" data-z="-1000">
+    <!--div class="step slide" data-x="0" data-y="2400" data-z="-1000">
         <h1>xOperator &ndash; XMPP Communication</h1>
         <figure>
             <a href="img/xOperator-JabberCommunication.png"><img alt="xOperator XMPP Communication" class="width90" src="img/xOperator-JabberCommunication.png"></a>
             <figcaption>In: S.Tramp et al.: <a href="http://link.springer.com/chapter/10.1007%2F978-3-540-68234-9_59">xOperator &ndash; An Extensible Semantic Agent for Instant Messaging Networks</a>, Proceedings of the 5th European Semantic Web Conference (ESWC2008), Tenerife, Spain</figcaption>
         </figure>
-    </div>
+    </div-->
 
-    <div class="step slide" data-x="0" data-y="2400" data-z="-2000">
+    <div class="step slide" data-x="0" data-y="2400" data-z="-1000">
     <h1>xOperator &ndash; Screenshot</h1>
     <figure>
-        <a href="img/xOperator-Screenshot.svg"><img alt="xOperator Screenshot" src="img/xOperator-Screenshot.png"></a>
-            <!--figcaption>In: S.Tramp et al.: <a href="http://link.springer.com/chapter/10.1007%2F978-3-540-68234-9_59">xOperator &ndash; An Extensible Semantic Agent for Instant Messaging Networks</a>, Proceedings of the 5th European Semantic Web Conference (ESWC2008), Tenerife, Spain</figcaption-->
+        <a href="img/xOperator-Screenshot.svg"><img alt="xOperator Screenshot" class="width80" src="img/xOperator-Screenshot.png"></a>
+            <figcaption>In: S.Tramp et al.: <a href="http://link.springer.com/chapter/10.1007%2F978-3-540-68234-9_59">xOperator &ndash; An Extensible Semantic Agent for Instant Messaging Networks</a>, Proceedings of the 5th European Semantic Web Conference (ESWC2008), Tenerife, Spain</figcaption>
     </figure>
     </div>
 
