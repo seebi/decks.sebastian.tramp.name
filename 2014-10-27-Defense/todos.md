@@ -51,8 +51,6 @@
 
 - Semantic Pingback: Rote Kästen über main steps packen
 
-- Eval Tabelle: xOperator nutzt search und update service
-
 # slides todos
 
 - check in 1280x1024
