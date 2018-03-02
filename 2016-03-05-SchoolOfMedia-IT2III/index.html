@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+    <script data-main="../scripts/main" src="../scripts/require-jquery.js"></script>
+
+    <link rel="stylesheet" href="../scripts/deckjs.css">
+    <link rel="stylesheet" href="../userthemes/lsom/style.css" id="style-theme-link" media="screen, projection">
+    <script src="../userthemes/lsom/script.js"></script>
+    <!--<link rel="stylesheet" href="../deck.js/themes/transition/vertical-slide.css" id="transition-theme-link">-->
+    <link rel="stylesheet" href="../deck.js/themes/transition/fade.css" id="transition-theme-link">
+    <link rel="stylesheet" href="local.css">
+
+    <meta name="author" content="Dr. Sebastian Tramp">
+    <meta name="dcterms.creator" content="http://sebastian.tramp.name">
+    <meta name="dcterms.date" content="2015-03-05">
+
+    <title>Web-Engineering, Web-Anwendungssysteme und Mobile Computing III</title>
+</head>
+
+<body class="deck-container">
+
+<figure class="deck-header no-js">
+    <span id="lsom-logo">
+        <a href="http://www.leipzigschoolofmedia.de/">
+            <span>Leipzig</span>
+            <span>School<br/>of Media</span>
+        </a>
+    </span>
+    <span class="title-from-current-deck">title-from-current-deck</span>
+    <figcaption class="hideme">Header graphic, containing LSoM logo and title of the currently show slide</figcaption>
+</figure>
+
+<div class="slide" id="title" lang="de">
+    <h1><a href="http://decks.sebastian.tramp.name/2013-03-06-SchoolOfMedia-IT2III/">Web-Engineering, Web-Anwendungssysteme und Mobile Computing III</a>
+        <span class="subtitle">
+            Eine Vorlesung mit integrierter Übung im Modul 3<br />
+            „<a href="http://www.leipzigschoolofmedia.de/master-crossmedia-management/module/modul-3-cmm/">Einführung in Aufbau und Nutzung von Internettechnologien (IT)</a>“<br />
+            des Studienganges<br />
+            „<a href="http://www.leipzigschoolofmedia.de/master-crossmedia-management/">Crossmedia Management</a>“
+        </span>
+    </h1>
+</div>
+
+
+<div class="slide" id="ziele" lang="de">
+    <h2>Ziele des Moduls (offiziell)</h2>
+    <blockquote>
+        <p>
+            Internettechnologien bilden die Basis crossmedialer Strategien.
+            Die Studierenden erlernen diese komplexen Technologien und erlangen <strong>Kompetenzen zum technischen Design</strong> multifunktionaler Web-Systeme und erweitern ihr Wissen über <strong>Einsatzmöglichkeiten wichtiger Klassen von Web-Anwendungssystemen</strong>.
+            Nach erfolgreichem Abschluss des Moduls kennen die Studierenden die technischen Grundlagen der Internettechnologien.
+            Sie verfügen über <strong>Grundwissen im Bereich Softwaretechnologien für Webanwendungen und Mobile Computing</strong>.
+            Sie können das Erlernte <strong>selbständig anwenden</strong>.
+        </p>
+        <p>
+            <cite>2013-09-26_IT-2_Tramp.pdf</cite>
+        </p>
+    </blockquote>
+</div>
+
+
+<div class="slide" id="zusammenfassung" lang="de">
+    <h2>Zusammenfassung (offiziell)</h2>
+    <blockquote>
+        <p>
+            Baustein IT 2 vermittelt die Softwaretechnik für die Entwicklung von Web-Applikationen.
+            Im Rahmen des Web-Engineering werden <strong>relevante Standards und Technologien</strong> vorgestellt.
+            Darüber hinaus werden <strong>wichtige Klassen von Web-Anwendungssystemen eingeführt</strong>.
+            Dazu zählen insbesondere ECommerce-Systeme, Virtuelle Welten, Lehr- und Lernsysteme.
+            Ein weiterer Schwerpunkt ist die Vorstellung von <strong>Technologien zur Entwicklung ubiquitärer Anwendungen</strong> wie Apps und Informationssystem für mobile Endgeräte, Tablet-PCs etc.
+        </p>
+        <p><cite><a href="http://www.leipzigschoolofmedia.de/master-crossmedia-management/module-studieninhalte/modul-3-cmm/">http://www.leipzigschoolofmedia.de/master-crossmedia-management/module/modul-3-cmm/</a></cite></p>
+    </blockquote>
+    <blockquote>
+        <p>Prüfungsleistung Projektarbeit; Bearbeitungszeit: 4 Wochen; Themenausgabe: 15.03.2014; Abgabetermin: 12.04.2014</p>
+    </blockquote>
+</div>
+
+
+<div class="slide" id="themen-per-tag">
+    <h2>Themen dieses Bausteins - nach Tag</h2>
+    <h3>14.01.2016</h3>
+    <ul>
+        <li>HTTP / Big Picture (oder: Wie das Web funktioniert)</li>
+        <li>HTML(5) (oder: Wie man Webseiten baut)</li>
+        <li>CSS (oder: Wie man Webseiten styled)</li>
+    </ul>
+    <h3>11.02.2016</h3>
+    <ul>
+        <li>PHP / Datenbanken (oder: Wie man Webseiten generiert)</li>
+        <li>Apache / PHP / WordPress Installation</li>
+    </ul>
+    <h3>05.03.2016</h3>
+    <ul class="strong">
+        <li>JavaScript (oder: Wie man spannende Webseiten baut)</li>
+        <li>Semantic Web Primer, schema.org</li>
+        <li>Magento</li>
+        <li>Management von Software-Projekten</li>
+        <li>Entwicklung für Mobile Devices</li>
+        <li>Projektbesprechung</li>
+    </ul>
+</div>
+
+<div class="slide" id="js-resources">
+    <h2>JavaScript Ressourcen</h2>
+    <ul>
+        <li><a href="../2012-02-09-SchoolOfMedia-WT2III/JavaScript.pdf">LSoM Slides (PDF)</a></li>
+        <li>Online Buch: <a href="http://openbook.galileocomputing.de/javascript/">JavaScript: Browserübergreifende Lösungen</a> von Christian Wenz</li>
+        <li>Referenzen:
+            <a href="https://developer.mozilla.org/en/JavaScript/Reference">Mozilla</a>,
+            <a href="http://de.selfhtml.org/javascript/">SelfHTML: JavaScript</a>,
+            <a href="https://de.wikipedia.org/wiki/Javascript#Kontrollstrukturen">Kontrollstrukturen</a>
+        </li>
+        <li>Tutorials: <a href="http://www.w3schools.com/js/default.asp">W3 Schools</a></li>
+        <li>jQuery:
+            <a href="http://docs.jquery.com/">Dokumentation</a>,
+            <a href="http://jqapi.com/">API Browser</a>,
+            <a href="http://jqueryui.com">jQuery UI</a></li>
+    </ul>
+</div>
+
+<div class="slide" id="semweb-concepts">
+    <h2>The Semantic Web: Concepts</h2>
+    <ul>
+        <li>Resource Description Framwork
+            <ul>
+                <li>Statement: Subject - Predicate - Object</li>
+                <li>Resources (IRIs) and Literals (strings + datatype + optional language tag)</li>
+            </ul>
+        </li>
+        <li>Schema and Ontology Languages
+        <ul>
+            <li>RDF Schema</li>
+            <li>Web Ontology Language (OWL) 2</li>
+        </ul>
+        <li>Vocabularies / Ontologies: schema.org, Goodrelations, ...</li>
+    </ul>
+</div>
+
+<div class="slide" id="semweb-triple">
+    <h2>Simple RDF graph</h2>
+    <figure>
+        <a href="images/Rdf_graph_for_Eric_Miller.png"><img alt="RDF graph of Eric Miller" src="images/Rdf_graph_for_Eric_Miller.png"></a>
+        <figcaption>In: <a href="http://en.wikipedia.org/wiki/Resource_Description_Framework">wikipedia</a></figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="schemaorg-intro" lang="de">
+    <h2>schema.org</h2>
+    <ul>
+        <li>Suchmaschinen dominierter Versuch, eine 'Ontologie für das Web' zu erstellen</li>
+        <li>Logischerweise, kein long tail, aber wichtige erste Konzepte
+        <a title="By User:Husky (Own work) [Public domain], via Wikimedia Commons" href="http://commons.wikimedia.org/wiki/File%3ALong_tail.svg"><img width="512" alt="Long tail" src="images/512px-Long_tail.png"/></a>
+        </li>
+        <li>Produkte, Events, Ratings, Offers, Person, ... <a href="http://schema.org/docs/full.html">and more</a>
+        <li>Hauptvorteil: Google, Bing, Yahoo und Yandex habe sich dieser Ontologie commited</li>
+    </ul>
+</div>
+
+<div class="slide" id="schemaorg-microdata">
+    <h2>schema.org - microdata</h2>
+    <ul>
+        <li>Microdata ist eine Sammlung von HTML5 Tags um Meta Daten in HTML Seiten zu integrieren.</li>
+        <li>Microdata steht damit in Konkurrenz zu RDFa, dem W3C Standard Web Standard mit gleichem Ziel</li>
+        <li><a href="http://www.w3.org/TR/microdata/">http://www.w3.org/TR/microdata/</a></li>
+        <li>Microdata gilt als deutlich weniger komplex in der Benutzung</li>
+    </ul>
+</div>
+
+<div class="slide" id="schemaorg-microdata-example">
+    <h2>schema.org - microdata Beispiel</h2>
+    <p>Wichtige Tags sind <code>itemscope</code>, <code>itemtype</code> und <code>itemprop</code></p>
+    <pre>
+&lt;!-- Hinweis: Das <a href="http://schema.org/docs/gs.html#microdata_itemscope_itemtype">itemscope</a> Attribut startet ein neues Subjekt --&gt;
+&lt;!-- Hinweis: Mit <a href="http://schema.org/docs/gs.html#microdata_itemscope_itemtype">itemtype</a> wird einem Subjekt eine Klasse zugeordnet --&gt;
+&lt;p itemscope itemtype="<a href="http://schema.org/Person">http://schema.org/Person</a>"&gt;
+  Guten Tag, mein Name ist
+    &lt;!-- Hinweis: Mit <a href="http://schema.org/docs/gs.html#microdata_itemprop">itemprop</a> werden Attribute zugeordnet --&gt;
+    &lt;span itemprop="name"&gt;Sebastian Tramp&lt;/span&gt;.
+&lt;/p&gt;
+    </pre>
+    <ul>
+        <li><a href="https://developers.google.com/structured-data/testing-tool/">Google Structured Data Testing Tool</a> (Referenz für das Praktikum)</li>
+        <li><a href="https://webmaster.yandex.com/microtest.xml">Yandex Structured data validator</a></li>
+    </ul>
+</div>
+
+<div class="slide" id="schemaorg-microdata-example2">
+    <h2>schema.org - microdata Beispiel 2</h2>
+    <p>Beispiel 2 zeigt, wie zusätzlich zu einfachen Literal Werten, ein benannter Link erzeugt wird (copyrightHolder), welcher eine Klasse und einen Namen bekommt.</p>
+    <pre>
+&lt;article itemscope itemtype="http://schema.org/Article"&gt;
+  &lt;h1 itemprop="name"&gt;Fahnder suchen ...&lt;/h1&gt;
+  &lt;p itemprop="text"&gt;Lorem ipsum dolor sit amet, ...&lt;/p&gt;
+  &lt;p&gt;
+    copyright &lt;span itemprop="copyrightYear">2014&lt;/span&gt; by
+    &lt;!-- Hinweis: Hier wird ein neues Subjekt angelegt welche
+      Objekt von copyrightHolder ist --&gt;
+    &lt;span itemprop="copyrightHolder" itemscope
+      itemtype="http://schema.org/Organization"&gt;
+    &lt;!-- Hinweis: Das attribut name bezieht sich jetzt schon
+      auf das neue Subjekt --&gt;
+    &lt;span itemprop="name">Spiegel&lt;/span&gt;
+  &lt;/span&gt;
+  &lt;/p&gt;
+&lt;/article&gt;
+    </pre>
+</div>
+
+<div class="slide" id="magento">
+    <h2>Magento</h2>
+    <figure>
+        <img src="../2012-02-09-SchoolOfMedia-WT2III/Magento.png" alt="Screenshot">
+        <figcaption>1. <a href="../2012-02-09-SchoolOfMedia-WT2III/Magento.pdf">Präsentation</a>, 2. <a href="http://www.magentocommerce.com/download">Installation</a></figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="se-intro">
+    <h2>Software Engineering</h2>
+    <p>Prinzipien, Methoden und Werkzeugen für die arbeitsteilige, ingenieurmäßige Entwicklung und Anwendung von umfangreichen Softwaresystemen (aus <a href="http://www.amazon.de/Lehrbuch-Softwaretechnik-Entwurf-Implementierung-Installation/dp/3827417066/ref=sr_1_1?ie=UTF8&qid=1394838084&sr=8-1&keywords=Balzert">Balzert</a>)</p>
+    <p>Dabei <strong>u.a.</strong> folgende Teilaufgaben wichtig:</p>
+    <ul>
+        <li>Anforderungserfassung</li>
+        <li>Spezifikation</li>
+        <li>Management und Qualität</li>
+    </ul>
+</div>
+
+<div class="slide" id="se-req">
+    <h2>Anforderungserfassung</h2>
+    <ul>
+        <li>Trennung von funktionalen und nicht-funktionalen Anforderungen</li>
+        <li>Möglichst formale Repräsention wählen - möglichst wenig prosa</li>
+        <li>Einzelne Anforderungen müssen identifizierbar sein</li>
+        <li>Je besser die Erfassung der Anforderungen, desto besser das Verständnis des Projekts</li>
+    </ul>
+</div>
+
+<div class="slide" id="se-req-func">
+    <h2>Funktionale Anforderungen</h2>
+    <p>Anforderungen welche die Funktionalität oder Dienste eines Produktes beschreiben.</p>
+    <p>Möglichst genaue Beschreibungen mit vielen Meta-Daten, welche insbesondere W-Fragen beantworten. Anforderungen können auch hierarchisch geordnet sein.</p>
+    <ul>
+        <li><code>Der Nutzer soll die gesamte Webseite durchsuchen können.</code></li>
+        <li><code>Die Suchergebnisse sollen highlights der gesuchten Wörter enthalten.</code></li>
+        <li><code>Gefunden Produkte sollen zuerst und mit Preis dargestellt werden</code></li>
+    </ul>
+    <p>Mögliche Attribute: Nutzerkategorie, Eingabe, Ziel, ... Priorität, Risiko(!)</p>
+    <p>Achtung: Anforderungen verändern sich ständig, da sich auch das Verständnis für das Projekt ändert.</p>
+</div>
+
+<div class="slide" id="se-req-nfunc">
+    <h2>Nicht-Funktionale Anforderungen</h2>
+    <p>Anforderungen, welche spezielle Funktionen der Software <strong>nicht</strong> betreffen.</p>
+    <ul>
+        <li>Produktanforderungen: Usability, Zuverlässigkeit, Effizienz, ...</li>
+        <li>Unternehmensanforderungen: Lieferung, Umsetzung, Vorgehensweise</li>
+        <li>Externe Anforderungen: Kompatibilität, Rechtliches wie Datenschutz, Gesetze, ...</li>
+    </ul>
+</div>
+
+
+<div class="slide" id="se-req-func-storycard">
+    <h2>Methode: User Stories</h2>
+    <p>Formalisierte aber trotzdem natürlich-sprachige Anforderungserfassung. Häufige Form:</p>
+    <p><code>Als --Rolle-- möchte ich --Ziel/Wunsch--, um --Nutzen--</code></p>
+    <p><code>Als --Besucher der Webseite-- möchte ich --meine Suchbegriffe hervorgehoben haben--, damit --ich mich besser zurecht finde--.</code></p>
+    <p>Vorteil: schnelle Erfassung von Anforderungen, gut für erste Phase der Anforderungserfassung.</p>
+</div>
+
+<div class="slide" id="se-req-func-usecase">
+    <h2>Methode: Use-Case Beschreibungen</h2>
+    <ul>
+        <li>Deutlich längere Variante einer User Story</li>
+        <li>Stark Dokument-orientiert, mit Historie versehen</li>
+        <li>Formale Verhaltens-Diagramme: Aktivitätsdiagramme, Sequenzdiagramme u.a. aus der <a href="http://de.wikipedia.org/wiki/Unified_Modeling_Language#Darstellung_in_Diagrammen">Unified Modeling Language</a></li>
+    </ul>
+</div>
+
+<div class="slide" id="activity-diagram">
+    <figure>
+        <a href="http://commons.wikimedia.org/wiki/File:Activity_2.png"><img alt="activity_diagram" src="images/activity_diagram.png"></a>
+        <figcaption>In: wikipedia</figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="sequence-diagram">
+    <figure>
+        <a href="images/WebID-AuthSequence.png"><img alt="sequence-diagram" src="images/WebID-AuthSequence.png"></a>
+        <figcaption>In: <a href="http://ceur-ws.org/Vol-905/TrampEtAl_COLD2012.pdf">S.Tramp: Access Delegation</a></figcaption>
+    </figure>
+    <p><a href="images/SemanticPingback-Sequence.pdf">anderes Sequenzdiagramm</a></p>
+</div>
+
+
+<div class="slide" id="se-books">
+    <h2>Software Engineering: Books</h2>
+    <ul>
+        <li><a href="http://www.amazon.de/dp/3827372577">Ian Sommerville: Software Engineering</a></li>
+        <li><a href="http://www.amazon.de/dp/0201835959">Frederick P. Brooks: The Mythical Man-Month. Essays on Software Engineering</a> -- "Der Einsatz zusätzlicher Arbeitskräfte bei bereits verzögerten Softwareprojekten verzögert sie nur noch weiter."</li>
+    </ul>
+</div>
+
+<div class="slide" id="issue-tracker">
+    <h2>Werkzeug: Issue-Tracking-System</h2>
+    <p>Idee: Anforderungen und konkretes Projekt-Management wird in issues / Fälle geteilt und mit einem issue tracker verwaltet. Unmittelbare Vorteile der Nutzung eines Issue-Trackers:</p>
+    <ul>
+        <li>Qualitätssteigerung</li>
+        <li>Transparenz</li>
+        <li>Verfügbarkeit der Historie</li>
+        <li>Dokumentation für folgende Projekte</li>
+    </ul>
+    <!--<p>Installieren und nutzen Sie einen Issue-Tracker: Planen Sie ihr Web-Projekt</p>-->
+    <p>Freie ITS: <a href="http://www.thegeekstuff.com/2010/08/bug-tracking-system/">Bugzilla, mantis, trac, ...</a></p>
+    <p>Kommerzielle ITS / Services: Atlassian, github, ...</p>
+</div>
+
+<div class="slide" id="vcs-intro">
+    <h2>Version Control Systems</h2>
+    <p>Software zur Verwaltung von Änderungen am Quellcode eines Software-Projektes.</p>
+    <ul>
+        <li>Wichtigstes Werkzeug bei der Entwicklung von Software</li>
+        <li>Transparenz der Entwicklung</li>
+        <li>Verantwortlichkeit und Dokumentation für Änderungen</li>
+        <li>Idealerweise mit Issue-Tracker gekoppelt</li>
+    </ul>
+</div>
+
+<div class="slide" id="vcs-diffs">
+    <h2>Einfache Versionen</h2>
+    <figure>
+        <a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/"><img alt="diffs" src="images/vcs-diffs.png"></a>
+        <figcaption>In: <a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/">A Visual Guide to Version Control</a></figcaption>
+    </figure>
+</div>
+<div class="slide" id="vcs-branching">
+    <h2>Branching</h2>
+    <figure>
+        <a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/"><img alt="branching" src="images/vcs-branching.png"></a>
+        <figcaption>In: <a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/">A Visual Guide to Version Control</a></figcaption>
+    </figure>
+</div>
+<div class="slide" id="vcs-merging">
+    <h2>Merging</h2>
+    <figure>
+        <a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/"><img alt="merging" src="images/vcs-merging.png"></a>
+        <figcaption>In: <a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/">A Visual Guide to Version Control</a></figcaption>
+    </figure>
+</div>
+<div class="slide" id="vcs-conflict">
+    <h2>Conflict</h2>
+    <figure>
+        <a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/"><img alt="conflict" src="images/vcs-conflict.png"></a>
+        <figcaption>In: <a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/">A Visual Guide to Version Control</a></figcaption>
+    </figure>
+</div>
+<div class="slide" id="vcs-tagging">
+    <h2>Tagging</h2>
+    <figure>
+        <a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/"><img alt="tagging" src="images/vcs-tagging.png"></a>
+        <figcaption>In: <a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/">A Visual Guide to Version Control</a></figcaption>
+    </figure>
+</div>
+
+
+<div class="slide" id="vcs-central">
+    <h2>Centralized VCS: CVS, Subversion, ...</h2>
+    <figure>
+        <a href="http://git-scm.com/book/en/Getting-Started-About-Version-Control"><img alt="vcs-central" src="images/vcs-central.png"></a>
+        <figcaption>In: <a href="http://git-scm.com/book/en/Getting-Started-About-Version-Control">git book</a></figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="vcs-decentral">
+    <h2>Distributed VCS: git, Mercurial, ...</h2>
+    <figure>
+        <a href="http://git-scm.com/book/en/Getting-Started-About-Version-Control"><img alt="vcs-decentral" src="images/vcs-decentral.png"></a>
+        <figcaption>In: <a href="http://git-scm.com/book/en/Getting-Started-About-Version-Control">git book</a></figcaption>
+    </figure>
+</div>
+
+<div class="slide" id="test">
+    <h2>Software Tests</h2>
+    <ul>
+        <li>Tests sind ein Werkzeug zur automatischen Überprüfung von Software</li>
+        <li>Tests werden parallel zur Software mit entwickelt (z.T. davor)</li>
+        <li>Kategorien: Funktionstests, UI Tests, Integrationstests, Lasttests ...</li>
+    </ul>
+</div>
+
+<div class="slide" id="ci">
+    <h2>Continuous Integration und Daily Builds</h2>
+    <ul>
+        <li>Gemeinsame Codebasis mit häufiger Integration</li>
+        <li>Kontinuierliche Test-Entwicklung und automatisierte Ausführung der Tests</li>
+        <li>Automatisiertes Reporting und Verteilung</li>
+        <li>Reporting schließt Tests und Code Coverage Reports mit ein</li>
+    </ul>
+    <p>Vorstufe: Daily Builds (einmal pro nacht)</p>
+</div>
+
+
+<div class="slide" id="jquery-mobile">
+    <h2>jQuery Mobile</h2>
+    <h3>Resources</h3>
+    <ul>
+        <li><a href="https://de.wikipedia.org/wiki/Cascading_Style_Sheets#Eigenschaftsspezifische_Stylesheets_.28Media_Queries.29">Media Queries</a></li>
+        <li><a href="http://jquerymobile.com/">jquerymobile.com</a></li>
+        <li><a href="http://markdalgleish.com/presentations/jquerymobile/">Presentation</a> by Mark Dalgleish</li>
+        <li><a href="http://view.jquerymobile.com/1.3.0/">Demo center for Version 1.3.0</a></li>
+        <li><a href="http://api.jquerymobile.com/">API Documentation</a>, esp. <a href="http://api.jquerymobile.com/data-attribute/">Data Attribute Reference</a> and <a href="http://jquerymobile.com/gbs/">Plattform support list</a></li>
+        <li><a href="http://learn.jquery.com/jquery-mobile/">jQuery Learning Center: jQuery Mobile Chapter</a></li>
+    </ul>
+</div>
+
+<div class="slide" id="projekt-aufgabe" lang="de">
+    <h2>Projektarbeit: Aufgabe</h2>
+    <p>Im Praktikum soll jede/r Student/in das erlernte Wissen um relevante Standards des Web-Engineerings praktisch anwenden.</p>
+    <p>Folgende Technologien sollen dabei benutzt werden:</p>
+    <ul>
+        <li>HTML5 und insbesondere Semantisches Markup</li>
+        <li>CSS3 und insbesondere Media Queries für ein Responsive Design</li>
+        <li>schema.org Annotationen mit Microdata</li>
+        <li>Optional: Web Fonts, JavaScript</li>
+    </ul>
+    <p>Das Web Projekt soll sich dabei an den Best Practices orientieren, welche wir
+    in der Vorlesung besprochen hatten. Das umfasst u.a. die Trennung von Layout,
+    Inhalt und aktiven Inhalten und die Benutzung von Validatoren. Das Projekt soll
+    sich unterschiedlichen Bildschirmgrößen anpassen und mit einem aktuellem
+    Firefox oder Chrome Browser funktionieren.
+    </p>
+</div>
+
+<div class="slide" id="projekt-abgabe">
+    <h2>Projektarbeit: Abgabe</h2>
+    <p>Es müssen folgende Dokumente abgegeben werden:</p>
+    <ol>
+        <li>Ein ZIP file mit dem gesamten Web Projekt (relative links, damit es überall funktioniert!).</li>
+        <li>Ein PDF Dokument welche das Web Projekt beschreibt und dabei auf folgende
+        Punkte eingeht: Hintergrund und selbst gestellte Anforderungen, Aufbau und
+        Erläuterungen zu technische Entscheidungen, Arbeitsweise, mögliche
+        Weiterentwicklungen des Web Projektes. Dieses Dokument darf nicht mehr als
+        8 Seiten im <a href="http://www.springer.com/computer/lncs?SGWID=0-164-6-793341-0">LNCS Stil</a> umfassen (dieser Stil ist Pflicht).
+        </li>
+    </ol>
+    <p>Abgabe erfolgt <a href="mailto:tramp@informatik.uni-leipzig,de">per mail</a> oder <a href="http://upload.sebastian.tramp.name">file upload</a> (<code>VornameNachname.zip/.pdf</code>).
+</div>
+
+<div class="slide" id="projekt-themen">
+    <h2>Projektarbeit: Themenvorschläge</h2>
+    <p>Ziel der Projektarbeit ist die exemplarische Durchführung eines Web-Projektes mit allen Basis-Facetten.
+    Die Menge des Inhalts ist dabei nebensächlich, wichtig ist der technische Durchstich, also alle Basis Web-Standard einmal angewendet zu haben.</p>
+    <p>Folgende Inhalte sind umfänglich völlig ausreichend:</p>
+    <ul>
+        <li>Die erste Seite einer Tageszeitung</li>
+        <li>Die Haupt-Inhalte einer Amazon Produktseite incl. Reviews</li>
+        <li>Die Inhalte einer nicht allzulangen Wikipedia-Seite</li>
+        <li>Die begleitende Webseite zum LSoM Filmprojekt</li>
+    </ul>
+</div>
+
+
+<div class="slide" id="thanks">
+    <h2>Thank you for your Attention!</h2>
+    <h3>My WebID:</h3>
+    <ul><li><a href="http://sebastian.tramp.name">http://sebastian.tramp.name</a></li></ul>
+    <h3>This slide deck:</h3>
+    <ul>
+        <li>
+            <a href="http://decks.sebastian.tramp.name/2014-03-15-SchoolOfMedia-IT2III/">http://decks.sebastian.tramp.name/2014-03-15-SchoolOfMedia-IT2III/</a>
+        </li>
+    </ul>
+</div>
+
+<!-- DECKJS STUFF - NO SLIDES FROM HERE -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<figure class="deck-footer">
+    <div class="deck-status">
+        <span class="deck-status-current">deck-status-current</span>
+        <span>/</span>
+        <span class="deck-status-total">deck-status-total</span>
+    </div>
+    <div class="deck-meta">
+        <span class="deck-meta-title">deck-meta-title</span>
+        <span class="deck-meta-date">deck-meta-date</span>
+        <span>|</span>
+        <span class="deck-meta-author">deck-meta-author</span>
+    </div>
+    <figcaption class="hideme">Footer graphic, containing site number, presentation title, author and date.</figcaption>
+</figure>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+
+img {
+    max-width: 80% !important;
+}
+
+.hideme {
+    color: red;
+    display: none;
+}
+
